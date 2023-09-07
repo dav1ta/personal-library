@@ -1,8 +1,59 @@
-site_name: My Docs
+site_name: Elibrary
 nav:
-    - Home: index.md
-    - Kubernetes: 
-       - architecture: kubernetes/architecture.md
+- Home: index.md
+- Python:
+    - Classes:
+        - Overview: python/classes/classes.md
+        - Data Model: python/classes/data_model.md
+        - Descriptors: python/classes/descriptors.md
+        - Iterators: python/classes/iterators.md
+    - Context Managers: python/context_managers/context_managers.md
+    - Data Types: 
+        - Overview: python/data_types/data_types.md
+        - Dict & Set: python/data_types/dic_set.md
+        - List & Tuple: python/data_types/list_tuple.md
+        - Object: python/data_types/object.md
+    - Decorators: python/decorators/decorators.md
+    - Functions: python/functions/index.md
+    - Modules:
+        - Builtins: python/modules/builtins.md
+        - IO: python/modules/io.md
+        - Overview: python/modules/modules.md
+    - Structure:
+        - Code Design: python/structure/code_design.md
+        - Design Patterns: python/structure/dessign_patterns.md
+        - Overview: python/structure/index.md
+        - Practices: python/structure/practices.md
+        - SOLID: python/structure/solid.md
+        - Structure: python/structure/structure.md
+    - Testing: python/testing/pytest_fixtures.py 
+- Postgres:
+    - Perfomance tricks: postgresql/tricks.md
+    
+
+- GitLab:
+    - Installation: gitlab/install.md
+- Kubernetes:
+    - Architecture: kubernetes/architecture.md
+    - Backup: kubernetes/backup.md
+    - Deployments: kubernetes/deployments.md
+    - Image Security: kubernetes/image-security.md
+    - Lifecycle: kubernetes/lifecycle.md
+    - Maintenance: kubernetes/maintanence.md
+    - Monitoring: kubernetes/monitoring.md
+    - Namespaces: kubernetes/namespaces.md
+    - Network: kubernetes/newtwork.md
+    - Pods: kubernetes/pods.md
+    - ReplicaSets: kubernetes/replicasets.md
+    - Roles: kubernetes/roles.md
+    - Security: kubernetes/security.md
+    - Services: kubernetes/services.md
+    - Scheduler: kubernetes/sheduler.md
+- Programming:
+    - Code Review: programming/code_review.md
+    - Algorithms : programming/algorithms.md
+    - AI : programming/ai.md
+    - ORM : programming/orm_sql.md
 
 theme:
   name: material
@@ -10,7 +61,6 @@ theme:
     primary: black
   font:
     code: Roboto Mono
-
 
 plugins:
   - search
@@ -21,3 +71,4 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+
