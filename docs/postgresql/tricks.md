@@ -180,3 +180,341 @@ REFRESH MATERIALIZED VIEW mat_view_sales;
 
 Keeping an eye on the logs and using tools like `pg_stat_activity` and `pgBadger` can provide insights into slow queries and other performance issues.
 
+
+
+
+# More Tricks
+
+
+
+**Slow Query 1:**
+```sql
+SELECT developper.name
+FROM developper
+LEFT JOIN talent ON developper.id = talent.foreign_id
+WHERE talent.id IS NULL;
+```
+
+**Fast Query 1:**
+```sql
+SELECT developper.name
+FROM developper
+WHERE NOT EXISTS (SELECT 1 FROM talent WHERE developper.id = talent.foreign_id);
+```
+
+
+
+**Slow Query 2:**
+```sql
+SELECT DISTINCT developper.name
+FROM developper, project
+WHERE developper.id = project.developer_id;
+```
+
+**Fast Query 2:**
+```sql
+SELECT developper.name
+FROM developper
+JOIN project ON developper.id = project.developer_id;
+```
+
+
+**Slow Query 3:**
+```sql
+SELECT * 
+FROM developper
+ORDER BY name DESC 
+LIMIT 10;
+```
+
+**Fast Query 3:**
+```sql
+SELECT * 
+FROM developper 
+ORDER BY name 
+LIMIT 10 OFFSET (SELECT COUNT(*) - 10 FROM developper);
+```
+
+
+
+**Slow Query 4:**
+```sql
+SELECT developper.name
+FROM developper
+WHERE age >= 20 AND age <= 30;
+```
+
+**Fast Query 4:**
+```sql
+SELECT developper.name
+FROM developper
+WHERE age BETWEEN 20 AND 30;
+```
+
+
+
+**Slow Query 5:**
+```sql
+SELECT COUNT(*)
+FROM developper
+WHERE name IS NULL;
+```
+
+**Fast Query 5:**
+```sql
+SELECT COUNT(name) - COUNT(*)
+FROM developper;
+```
+
+
+
+**Slow Query 6:**
+```sql
+SELECT developper.name
+FROM developper
+WHERE name LIKE 'John%';
+```
+
+**Fast Query 6:**
+```sql
+SELECT developper.name
+FROM developper
+WHERE name >= 'John' AND name < 'Joho';
+```
+
+
+
+**Slow Query 7:**
+```sql
+SELECT *
+FROM developper
+WHERE id IN (SELECT developer_id FROM project WHERE status = 'completed');
+```
+
+**Fast Query 7:**
+```sql
+SELECT developper.*
+FROM developper
+JOIN project ON developper.id = project.developer_id
+WHERE project.status = 'completed';
+```
+
+
+
+**Slow Query 8:**
+```sql
+SELECT SUM(salary)
+FROM developper
+GROUP BY department_id
+HAVING SUM(salary) > 10000;
+```
+
+**Fast Query 8:**
+```sql
+SELECT department_id, SUM(salary) as total_salary
+FROM developper
+GROUP BY department_id
+HAVING total_salary > 10000;
+```
+
+
+
+**Slow Query 9:**
+```sql
+SELECT developper.name
+FROM developper, project
+WHERE developper.id = project.developer_id AND project.status = 'active';
+```
+
+**Fast Query 9:**
+```sql
+SELECT developper.name
+FROM developper
+JOIN project ON developper.id = project.developer_id
+WHERE project.status = 'active';
+```
+
+
+
+**Slow Query 10:**
+```sql
+SELECT developper.name
+FROM developper
+LEFT JOIN project ON developper.id = project.developer_id
+WHERE project.id IS NULL;
+```
+
+**Fast Query 10:**
+```sql
+SELECT developper.name
+FROM developper
+WHERE NOT EXISTS (SELECT 1 FROM project WHERE developper.id = project.developer_id);
+```
+
+
+
+**Slow Query 11:**
+```sql
+SELECT developper.name
+FROM developper
+WHERE UPPER(name) = 'JOHN';
+```
+
+**Fast Query 11:**
+```sql
+-- Assuming there is an index on the `name` column.
+SELECT developper.name
+FROM developper
+WHERE name = 'John';
+```
+
+
+
+**Slow Query 12:**
+```sql
+SELECT name, SUM(salary) 
+FROM developper
+GROUP BY name
+ORDER BY SUM(salary) DESC;
+```
+
+**Fast Query 12:**
+```sql
+-- Use an alias to avoid computing SUM(salary) twice.
+SELECT name, SUM(salary) as total_salary 
+FROM developper
+GROUP BY name
+ORDER BY total_salary DESC;
+```
+
+
+
+**Slow Query 13:**
+```sql
+SELECT developper.name
+FROM developper, skills
+WHERE developper.id = skills.developer_id AND skills.name = 'Python';
+```
+
+**Fast Query 13:**
+```sql
+SELECT developper.name
+FROM developper
+JOIN skills ON developper.id = skills.developer_id
+WHERE skills.name = 'Python';
+```
+
+
+**Slow Query 14:**
+```sql
+SELECT developper.name
+FROM developper
+WHERE id IN (SELECT developer_id FROM project WHERE status NOT IN ('completed', 'active'));
+```
+
+**Fast Query 14:**
+```sql
+SELECT developper.name
+FROM developper
+JOIN project ON developper.id = project.developer_id
+WHERE project.status NOT IN ('completed', 'active');
+```
+
+
+
+**Slow Query 15:**
+```sql
+SELECT developper.name
+FROM developper
+LEFT JOIN project ON developper.id = project.developer_id
+WHERE project.name IS NULL;
+```
+
+**Fast Query 15:**
+```sql
+SELECT developper.name
+FROM developper
+WHERE NOT EXISTS (SELECT 1 FROM project WHERE developper.id = project.developer_id);
+```
+
+
+**Slow Query 16:**
+```sql
+SELECT developper.name, COUNT(project.id)
+FROM developper, project
+WHERE developper.id = project.developer_id
+GROUP BY developper.name;
+```
+
+**Fast Query 16:**
+```sql
+SELECT developper.name, COUNT(project.id)
+FROM developper
+JOIN project ON developper.id = project.developer_id
+GROUP BY developper.name;
+```
+
+
+**Slow Query 17:**
+```sql
+SELECT developper.name
+FROM developper
+WHERE CHAR_LENGTH(name) > 5;
+```
+
+**Fast Query 17:**
+```sql
+-- Assuming there is an index on the `name` column.
+SELECT developper.name
+FROM developper
+WHERE LENGTH(name) > 5;
+```
+
+
+**Slow Query 18:**
+```sql
+SELECT developper.name
+FROM developper, project
+WHERE developper.id = project.developer_id AND project.status LIKE 'act%';
+```
+
+**Fast Query 18:**
+```sql
+SELECT developper.name
+FROM developper
+JOIN project ON developper.id = project.developer_id
+WHERE project.status LIKE 'act%';
+```
+
+
+**Slow Query 19:**
+```sql
+SELECT developper.name
+FROM developper
+WHERE age > 20
+ORDER BY age;
+```
+
+**Fast Query 19:**
+```sql
+-- If there's an index on age, this will be faster.
+SELECT developper.name
+FROM developper
+WHERE age > 20
+ORDER BY age ASC;
+```
+
+
+**Slow Query 20:**
+```sql
+SELECT developper.name
+FROM developper
+WHERE name <> '';
+```
+
+**Fast Query 20:**
+```sql
+SELECT developper.name
+FROM developper
+WHERE name IS NOT NULL AND name != '';
+```
