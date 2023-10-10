@@ -26,6 +26,8 @@ nav:
         - Practices: python/structure/practices.md
         - SOLID: python/structure/solid.md
         - Structure: python/structure/structure.md
+    - Async:
+        - asyncio: python/async.md
     - Testing: python/testing/pytest_fixtures.py 
 - Postgres:
     - Perfomance tricks: postgresql/tricks.md
@@ -61,6 +63,8 @@ theme:
     primary: black
   font:
     code: Roboto Mono
+  features:
+    - content.code.copy
 
 plugins:
   - search
