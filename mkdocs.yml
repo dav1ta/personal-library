@@ -29,6 +29,8 @@ nav:
     - Async:
         - asyncio: python/async.md
     - Testing: python/testing/pytest_fixtures.py 
+- Docker:
+    - Docker Compose: docker/docker-compose.md
 - Postgres:
     - Perfomance tricks: postgresql/tricks.md
     
