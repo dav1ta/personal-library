@@ -9,6 +9,10 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
+
+    - name: Display OS information
+      run: cat /etc/os-release
+
     - name: Checkout
       uses: actions/checkout@v2
 
