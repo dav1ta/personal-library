@@ -33,10 +33,12 @@ nav:
     - Docker Compose: docker/docker-compose.md
 - Postgres:
     - Perfomance tricks: postgresql/tricks.md
+- Git:
+    - Workflows : git/flows.md
     
 
-- GitLab:
-    - Installation: gitlab/install.md
+- Setups:
+    - Gitlab: setups/install.md
 - Kubernetes:
     - Architecture: kubernetes/architecture.md
     - Backup: kubernetes/backup.md
@@ -58,6 +60,12 @@ nav:
     - Algorithms : programming/algorithms.md
     - AI : programming/ai.md
     - ORM : programming/orm_sql.md
+- Ansible: ansible/ansible.md
+- Other:
+    - Tmux : tools/tmux.md
+    - Neovim : tools/nvim.md
+- Cybersec:
+    - Sofware Security : cybersecurity/softwaresecurity.md
 
 theme:
   name: material
