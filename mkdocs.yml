@@ -66,6 +66,11 @@ nav:
     - Neovim : tools/nvim.md
 - Cybersec:
     - Sofware Security : cybersecurity/softwaresecurity.md
+- Rust:
+    - Types: rust/vars.md
+    - Generators: rust/generators.md
+    - Objects : rust/object.md
+    - Memory : rust/memory.md
 
 theme:
   name: material
