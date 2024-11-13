@@ -1,30 +1,6 @@
 
 # Cybersecurity: Securing Software - Tutorial
 
-## Table of Contents
-
-1. [Introduction to Cybersecurity in Software Development](#introduction-to-cybersecurity-in-software-development)
-2. [Understanding Code Injection](#understanding-code-injection)
-   - Stored Attacks
-   - SQL Injection
-3. [Server and Client-Side Validation](#server-and-client-side-validation)
-4. [Cross-Site Scripting (XSS) Attacks](#cross-site-scripting-xss-attacks)
-5. [Arbitrary Code Execution](#arbitrary-code-execution)
-6. [Reverse Engineering](#reverse-engineering)
-7. [Mitigation Strategies](#mitigation-strategies)
-8. [Buffer Overflow Attacks](#buffer-overflow-attacks)
-9. [Session Hijacking and Management](#session-hijacking-and-management)
-10. [Phishing and Social Engineering Attacks](#phishing-and-social-engineering-attacks)
-11. [Encryption and Cryptography in Software Security](#encryption-and-cryptography-in-software-security)
-12. [Application Security Testing](#application-security-testing)
-13. [Secure Software Development Lifecycle (SSDLC)](#secure-software-development-lifecycle-ssdlc)
-14. [Compliance and Regulatory Frameworks](#compliance-and-regulatory-frameworks)
-15. [Incident Response Planning](#incident-response-planning)
-16. [Cloud Security Considerations](#cloud-security-considerations)
-17. [Internet of Things (IoT) Security](#internet-of-things-iot-security)
-18. [Conclusion](#conclusion)
-
-
 
 ## 1. Introduction to Cybersecurity in Software Development
 

@@ -28,14 +28,20 @@ nav:
         - Structure: python/structure/structure.md
     - Async:
         - asyncio: python/async.md
+    - Threading: python/threading/threading.md
+    - From Talks: python/talks/talks.md
     - Testing: python/testing/pytest_fixtures.py 
 - Docker:
     - Docker Compose: docker/docker-compose.md
+    - Docker: docker/docker.md
 - Postgres:
     - Perfomance tricks: postgresql/tricks.md
 - Git:
     - Workflows : git/flows.md
     
+- Angular:
+    - Rxjs : angular/rxjs.md
+    - Tips : angular/tips.md
 
 - Setups:
     - Gitlab: setups/install.md
