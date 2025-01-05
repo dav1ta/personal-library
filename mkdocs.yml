@@ -66,6 +66,7 @@ nav:
     - Algorithms : programming/algorithms.md
     - AI : programming/ai.md
     - ORM : programming/orm_sql.md
+    - Graph: graph/graph.md
 - Ansible: ansible/ansible.md
 - Other:
     - Tmux : tools/tmux.md

@@ -612,7 +612,73 @@
      });
    ```
 
+
+
 ---
+
+### 26. fromEvent
+- **Usage**: Creates an Observable that emits events of a specific type from an Angular component template element.
+- **Example**:
+    ```typescript
+    import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
+    import { fromEvent } from 'rxjs';
+
+    @Component({
+      selector: 'app-example',
+      template: `<button #myButton>Click Me</button>`
+    })
+    export class ExampleComponent implements AfterViewInit {
+      @ViewChild('myButton', { static: true }) button!: ElementRef;
+
+      ngAfterViewInit(): void {
+        fromEvent(this.button.nativeElement, 'click').subscribe(() => {
+          console.log('Button clicked!');
+        });
+      }
+    }
+    ```
+
+---
+
+### 27. interval
+- **Usage**: Creates an Observable that emits sequential numbers every specified interval of time.
+- **Example**:
+    ```typescript
+    import { interval } from 'rxjs';
+
+    interval(1000).subscribe(value => console.log(value)); // Emits a number every second
+    ```
+
+---
+
+
+### 28. startWith
+- **Usage**: Emits the specified initial values before any values emitted by the source Observable.
+- **Example**:
+    ```typescript
+    import { of } from 'rxjs';
+    import { startWith } from 'rxjs/operators';
+
+    of(2, 3).pipe(
+      startWith(1)
+    ).subscribe(value => console.log(value)); // Output: 1, 2, 3
+    ```
+
+---
+
+### 29. take
+- **Usage**: Takes only the first N values from an Observable and then completes.
+- **Example**:
+    ```typescript
+    import { of } from 'rxjs';
+    import { take } from 'rxjs/operators';
+
+    of(1, 2, 3, 4, 5).pipe(
+      take(3)
+    ).subscribe(value => console.log(value)); // Output: 1, 2, 3
+    ```
+
+
 
 ## Additional Angular Features Beyond RxJS Operators
 
