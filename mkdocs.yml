@@ -36,12 +36,14 @@ nav:
     - Docker: docker/docker.md
 - Postgres:
     - Perfomance tricks: postgresql/tricks.md
+    - Expert : postgresql/postgres.md
 - Git:
     - Workflows : git/flows.md
     
 - Angular:
     - Rxjs : angular/rxjs.md
     - Tips : angular/tips.md
+    - General : angular/expert.md
 
 - Setups:
     - Gitlab: setups/install.md
@@ -67,6 +69,10 @@ nav:
     - AI : programming/ai.md
     - ORM : programming/orm_sql.md
     - Graph: graph/graph.md
+- Django:
+    - tips : django/django.md
+- Odoo:
+    - owl : odoo/owl.md
 - Ansible: ansible/ansible.md
 - Other:
     - Tmux : tools/tmux.md
