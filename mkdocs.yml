@@ -30,7 +30,8 @@ nav:
         - asyncio: python/async.md
     - Threading: python/threading/threading.md
     - From Talks: python/talks/talks.md
-    - Testing: python/testing/pytest_fixtures.py 
+    - Testing: python/testing/test.md
+    - Typing : python/type_annotations/type.md
 - Docker:
     - Docker Compose: docker/docker-compose.md
     - Docker: docker/docker.md
@@ -69,6 +70,10 @@ nav:
     - AI : programming/ai.md
     - ORM : programming/orm_sql.md
     - Graph: graph/graph.md
+    - Questions: programming/questions.md
+- System Design:
+    - Design Patterns: system_design/design.md
+    - Problems : system_design/prob.md
 - Django:
     - tips : django/django.md
 - Odoo:
@@ -84,6 +89,9 @@ nav:
     - Generators: rust/generators.md
     - Objects : rust/object.md
     - Memory : rust/memory.md
+- Daily life:
+    - Nutrition: other/nutr.md
+    
 
 theme:
   name: material
