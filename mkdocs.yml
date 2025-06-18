@@ -2,6 +2,39 @@ site_name: Elibrary
 nav:
 - Home: index.md
 - Python:
+    - Overview: python/index.md
+    - Basics:
+        - Data Types: python/basics/data_types.md
+        - Lists & Tuples: python/basics/lists_tuples.md
+        - Dictionaries & Sets: python/basics/dictionaries_sets.md
+        - Objects: python/basics/objects.md
+        - Functions: python/basics/functions.md
+        - Modules: python/basics/modules.md
+        - Builtins: python/basics/builtins.md
+        - IO: python/basics/io.md
+        - Structure: python/basics/structure.md
+        - Collections: python/basics/collections.md
+        - Data Structures: python/basics/data_structures.md
+        - Datetime: python/basics/datetime.md
+        - Decorators: python/basics/decorators.md
+        - Performance: python/basics/performance.md
+        - Type Annotations: python/basics/type_annotations.md
+    - Advanced:
+        - Classes: python/advanced/classes.md
+        - Data Model: python/advanced/data_model.md
+        - Descriptors: python/advanced/descriptors.md
+        - Iterators: python/advanced/iterators.md
+        - Type System: python/advanced/type_system.md
+        - Threading: python/advanced/threading.md
+        - Async Programming: python/advanced/async.md
+        - Decorators: python/advanced/decorators.md
+        - Context Managers: python/advanced/context_managers.md
+        - Testing: python/advanced/testing.md
+        - Pytest Fixtures: python/advanced/pytest_fixtures.md
+        - SOLID Principles: python/advanced/solid.md
+        - Code Design: python/advanced/code_design.md
+        - Objects: python/advanced/objects.md
+        - Best Practices: python/advanced/best_practices.md
     - Classes:
         - Overview: python/classes/classes.md
         - Data Model: python/classes/data_model.md
@@ -31,21 +64,37 @@ nav:
     - Threading: python/threading/threading.md
     - From Talks: python/talks/talks.md
     - Testing: python/testing/test.md
-    - Typing : python/type_annotations/type.md
+- FastAPI:
+    - Overview: fastapi/index.md
+    - Basics:
+        - Getting Started: fastapi/basics/getting_started.md
+        - CRUD Operations: fastapi/basics/crud_operations.md
+        - Dependencies: fastapi/basics/dependencies.md
+        - Best Practices: fastapi/basics/best_practices.md
+        - Troubleshooting: fastapi/basics/troubleshooting.md
+    - Advanced:
+        - CRUD Patterns: fastapi/advanced/crud_patterns.md
+    - Security:
+        - JWT: fastapi/security/jwt.md
+- PostgreSQL:
+    - Overview: postgresql/index.md
+    - Basics:
+        - Installation: postgresql/basics/installation.md
+        - Configuration: postgresql/basics/configuration.md
+    - Advanced:
+        - Performance: postgresql/advanced/performance.md
+    - Performance Tricks: postgresql/tricks.md
+    - Expert: postgresql/postgres.md
 - Docker:
     - Docker Compose: docker/docker-compose.md
     - Docker: docker/docker.md
-- Postgres:
-    - Perfomance tricks: postgresql/tricks.md
-    - Expert : postgresql/postgres.md
 - Git:
-    - Workflows : git/flows.md
-    
+    - Workflows: git/flows.md
 - Angular:
-    - Rxjs : angular/rxjs.md
-    - Tips : angular/tips.md
-    - General : angular/expert.md
-
+    - Rxjs: angular/rxjs.md
+    - Tips: angular/tips.md
+    - General: angular/expert.md
+    - Subjects: angular/subjects.md
 - Setups:
     - Gitlab: setups/install.md
 - Kubernetes:
@@ -66,29 +115,32 @@ nav:
     - Scheduler: kubernetes/sheduler.md
 - Programming:
     - Code Review: programming/code_review.md
-    - Algorithms : programming/algorithms.md
-    - AI : programming/ai.md
-    - ORM : programming/orm_sql.md
+    - Algorithms: programming/algorithms.md
+    - AI: programming/ai.md
+    - ORM: programming/orm_sql.md
     - Graph: graph/graph.md
     - Questions: programming/questions.md
+    - Interview: programming/interview.md
 - System Design:
     - Design Patterns: system_design/design.md
-    - Problems : system_design/prob.md
+    - Problems: system_design/prob.md
+    - Book: system_design/book.md
 - Django:
-    - tips : django/django.md
+    - Tips: django/django.md
 - Odoo:
-    - owl : odoo/owl.md
+    - OWL: odoo/owl.md
 - Ansible: ansible/ansible.md
 - Other:
-    - Tmux : tools/tmux.md
-    - Neovim : tools/nvim.md
+    - Tmux: tools/tmux.md
+    - Neovim: tools/nvim.md
+    - Neovim Notes: nvim/notes.md
 - Cybersec:
-    - Sofware Security : cybersecurity/softwaresecurity.md
+    - Software Security: cybersecurity/softwaresecurity.md
 - Rust:
     - Types: rust/vars.md
     - Generators: rust/generators.md
-    - Objects : rust/object.md
-    - Memory : rust/memory.md
+    - Objects: rust/object.md
+    - Memory: rust/memory.md
 - Daily life:
     - Nutrition: other/nutr.md
     
