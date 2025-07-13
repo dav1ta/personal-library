@@ -23,6 +23,7 @@ Welcome to the Python documentation. This guide covers everything from basic con
 - [Type System](advanced/type_system.md)
 - [Threading](advanced/threading.md)
 - [Async Programming](advanced/async.md)
+- [Custom Awaitables](advanced/custom_awaitables.md)
 - [Decorators](advanced/decorators.md)
 - [Context Managers](advanced/context_managers.md)
 - [Testing](advanced/testing.md)
