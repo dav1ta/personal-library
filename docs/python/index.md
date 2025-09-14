@@ -1,6 +1,9 @@
-# Python Documentation
+# Python Docs Overview
 
-Welcome to the Python documentation. This guide covers everything from basic concepts to advanced programming techniques.
+Organized into: basics, advanced, classes, decorators, threading/testing, modules, and structure.
+
+- Start with `basics/` then explore advanced topics.
+- Each section includes an `index.md` or overview for context.
 
 ## Table of Contents
 

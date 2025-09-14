@@ -19,6 +19,7 @@ nav:
         - Decorators: python/basics/decorators.md
         - Performance: python/basics/performance.md
         - Type Annotations: python/basics/type_annotations.md
+        - Interesting : python/interesting.md
     - Advanced:
         - Classes: python/advanced/classes.md
         - Data Model: python/advanced/data_model.md

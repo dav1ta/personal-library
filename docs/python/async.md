@@ -334,8 +334,11 @@ async def consumer(queue):
         item = await queue.get()
         print(f"Consumed {item}")
 
-queue = asyncio.Queue()
-asyncio.run(asyncio.gather(producer(queue), consumer(queue)))
+async def main():
+    queue = asyncio.Queue()
+    await asyncio.gather(producer(queue), consumer(queue))
+
+asyncio.run(main())
 ```
 
 #### 10.2. Implementing Producer-Consumer with `asyncio`
@@ -361,17 +364,23 @@ async def consumer(queue, name):
             break
         print(f"Consumer {name} consumed {item}")
 
-queue = asyncio.Queue()
+async def main():
+    queue = asyncio.Queue()
 
-producers = [producer(queue, name=i) for i in range(3)]
-consumers = [consumer(queue, name=i) for i in range(3)]
+    consumers = [asyncio.create_task(consumer(queue, name=i)) for i in range(3)]
+    producers = [asyncio.create_task(producer(queue, name=i)) for i in range(3)]
 
-# Run the producers and consumers
-asyncio.run(asyncio.gather(*producers, *consumers))
+    # Wait for all producers to finish
+    await asyncio.gather(*producers)
 
-# Signal the consumers to exit
-for _ in range(3):
-    queue.put_nowait(None)
+    # Signal the consumers to exit
+    for _ in range(len(consumers)):
+        await queue.put(None)
+
+    # Wait for all consumers to exit
+    await asyncio.gather(*consumers)
+
+asyncio.run(main())
 ```
 
 #### 10.3. Limiting Queue Size
@@ -820,4 +829,128 @@ def coro2():
 scheduler.add_task(coro1())
 scheduler.add_task(coro2())
 scheduler.run()
+```
+
+---
+
+## Appendix: Yield Patterns (Generators and Async Generators)
+
+These examples show practical, easy-to-reuse patterns with `yield`, `yield from`, and async generators.
+
+### A1. Basic generator (lazy iteration)
+```python
+def read_lines(path):
+    with open(path, encoding="utf-8") as f:
+        for line in f:
+            yield line.rstrip("\n")
+
+for line in read_lines("data.txt"):
+    ...
+```
+
+### A2. Sending values into a generator (`send`)
+```python
+def accumulator():
+    total = 0
+    while True:
+        x = yield total  # yield current total, receive next x
+        total += x
+
+acc = accumulator()
+next(acc)            # prime: returns 0
+print(acc.send(5))   # 5
+print(acc.send(7))   # 12
+```
+
+### A3. Delegation with `yield from` and return values (PEP 380)
+```python
+def subgen():
+    yield 1
+    yield 2
+    return 99         # becomes StopIteration.value
+
+def outer():
+    result = yield from subgen()
+    yield f"subgen returned {result}"
+
+print(list(outer()))  # [1, 2, 'subgen returned 99']
+```
+
+### A4. Generator-based context managers
+```python
+from contextlib import contextmanager
+
+@contextmanager
+def opened(path, mode="r", **kw):
+    f = open(path, mode, **kw)
+    try:
+        yield f
+    finally:
+        f.close()
+
+with opened("data.txt", encoding="utf-8") as f:
+    for line in f: ...
+```
+
+### A5. Streaming pipelines (compose generators)
+```python
+def grep(lines, needle):
+    for ln in lines:
+        if needle in ln:
+            yield ln
+
+def lower(lines):
+    for ln in lines:
+        yield ln.lower()
+
+with open("app.log", encoding="utf-8") as f:
+    for ln in grep(lower(f), "error"):
+        ...
+```
+
+### A6. Async generators (`async def` + `yield`)
+```python
+import asyncio
+
+async def ticker(delay, count):
+    for i in range(count):
+        await asyncio.sleep(delay)
+        yield i
+
+async def main():
+    async for t in ticker(0.5, 3):
+        print(t)
+
+asyncio.run(main())
+```
+
+### A7. Async generator cleanup (`aclose` and `finally`)
+```python
+import asyncio
+
+async def stream():
+    try:
+        while True:
+            yield await asyncio.sleep(0.1, result=42)
+    finally:
+        print("cleanup!")
+
+async def main():
+    agen = stream()
+    print(await agen.__anext__())
+    await agen.aclose()  # triggers finally
+
+asyncio.run(main())
+```
+
+### A8. Pytest fixtures with `yield` (setup/teardown)
+```python
+# conftest.py
+import pytest
+
+@pytest.fixture
+def resource():
+    obj = acquire()
+    yield obj     # test runs here
+    release(obj)  # teardown always runs
 ```
