@@ -520,4 +520,4 @@ class ReusableAwaitable:
 
 ## Examples Repository
 
-For more examples and use cases, see the [FastAPI Examples](../fastapi/examples/) which demonstrate custom awaitables in web applications. 
+For more examples and use cases, see the FastAPI examples in this project, which demonstrate custom awaitables in web applications.

@@ -1,3 +1,5 @@
+Note: See `io.md` for advanced I/O wrappers and patterns (TextIOWrapper, BytesIO, StringIO, buffering).
+
 data representation
 
 # Specify a bytes literal (note: b' prefix)

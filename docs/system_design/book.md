@@ -4,8 +4,7 @@
 - [Preface](#preface)  
 - [License](#license)  
 - [Getting Started](#getting-started)  
-- [Chapter I: IP & Networking](#chapter-i-ip--networking)  
-- [Chapter II: Databases and DBMS](#chapter-ii-databases-and-dbms)  
+- [Chapter I: IP & Networking](#chapter-i-ip-networking)  
 - ...
 
 ---
@@ -1066,4 +1065,3 @@ No single API technology is inherently "better"; choice depends on specific requ
 
 *Note:* This summary encapsulates key design considerations, requirements, and strategies across multiple system design scenarios, highlighting scalability, reliability, and resilience strategies.
 ~~~
-

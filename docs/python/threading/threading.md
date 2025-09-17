@@ -1,5 +1,7 @@
 # Python `threading` Module Synchronization Primitives
 
+> Note: For the comprehensive threading guide, see `advanced/threading.md`.
+
 The `threading` module in Python provides several synchronization primitives that help coordinate and manage access to shared resources among multiple threads. Here’s an overview of the key primitives available.
 
 ## 1. **Lock**

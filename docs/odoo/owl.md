@@ -17,7 +17,7 @@ This expert-level guide delves into the OWL framework within Odoo versions 16, 1
 7. [Integrating OWL with Odoo's Backend](#7-integrating-owl-with-odoos-backend)
 8. [Performance Optimization in OWL](#8-performance-optimization-in-owl)
 9. [Best Practices for OWL Development](#9-best-practices-for-owl-development)
-10. [Latest Features in OWL for Odoo 16, 17, 18](#10-latest-features-in-owl-for-odoo-161718)
+10. [Latest Features in OWL for Odoo 16, 17, 18](#10-latest-features-in-owl-for-odoo-16-17-18)
 11. [Testing OWL Components](#11-testing-owl-components)
 12. [Security Considerations in OWL](#12-security-considerations-in-owl)
 13. [Extending OWL with Custom Functionality](#13-extending-owl-with-custom-functionality)
@@ -2482,4 +2482,3 @@ Mastering the OWL framework within Odoo empowers developers to build modern, eff
 The integration of the OWL framework into Odoo represents a significant advancement in building dynamic and responsive business applications. By embracing OWL's modern web development paradigms and following the best practices outlined in this guide, you can develop Odoo modules that not only meet current business needs but also adapt to future challenges and innovations.
 
 Embrace the power of OWL to elevate your Odoo development experience, delivering exceptional user experiences and robust functionalities that drive business success.
-

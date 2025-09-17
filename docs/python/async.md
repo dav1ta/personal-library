@@ -1,4 +1,6 @@
 
+> See also: the comprehensive guide in `advanced/async.md`.
+
 ### 1. Introduction to Asynchronous Programming
 
 Asynchronous programming is a method that allows for the execution of certain tasks concurrently without blocking the main thread. Instead of waiting for one task to complete before moving on to the next, asynchronous programming allows multiple tasks to run in "parallel", making better use of system resources and often speeding up overall execution.

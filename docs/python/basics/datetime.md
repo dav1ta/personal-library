@@ -1,5 +1,7 @@
 # Working with Dates and Times in Python
 
+Note: For timezone-aware datetimes and DST handling, see `modules/datetime_tz.md`.
+
 Python's `datetime` module provides classes for manipulating dates and times.
 
 ## Importing datetime

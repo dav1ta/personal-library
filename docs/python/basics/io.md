@@ -1,5 +1,7 @@
 # Python I/O Operations
 
+Note: For advanced patterns and wrappers, see `io.md`.
+
 ## Introduction
 
 Python provides powerful tools for handling input and output operations. This guide covers various aspects of I/O in Python, including file operations, data representation, text encoding, and command-line arguments.

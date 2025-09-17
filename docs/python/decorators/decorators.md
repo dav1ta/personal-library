@@ -188,3 +188,4 @@ class Customer(BaseResolverMixin):
     name: str
     address: str
 ```
+> Note: See `advanced/decorators.md` for the canonical, in-depth guide to decorators. This page contains snippet-style examples.

@@ -1,3 +1,5 @@
+> Note: For a full treatment of context managers, see `advanced/context_managers.md`.
+
 ## EXAMPLE
 
 ```python

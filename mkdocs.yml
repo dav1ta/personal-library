@@ -3,68 +3,109 @@ nav:
 - Home: index.md
 - Python:
     - Overview: python/index.md
-    - Basics:
-        - Data Types: python/basics/data_types.md
-        - Lists & Tuples: python/basics/lists_tuples.md
-        - Dictionaries & Sets: python/basics/dictionaries_sets.md
-        - Objects: python/basics/objects.md
-        - Functions: python/basics/functions.md
-        - Modules: python/basics/modules.md
-        - Builtins: python/basics/builtins.md
-        - IO: python/basics/io.md
-        - Structure: python/basics/structure.md
-        - Collections: python/basics/collections.md
-        - Data Structures: python/basics/data_structures.md
-        - Datetime: python/basics/datetime.md
-        - Decorators: python/basics/decorators.md
-        - Performance: python/basics/performance.md
-        - Type Annotations: python/basics/type_annotations.md
-        - Interesting : python/interesting.md
-    - Advanced:
-        - Classes: python/advanced/classes.md
-        - Data Model: python/advanced/data_model.md
-        - Descriptors: python/advanced/descriptors.md
-        - Iterators: python/advanced/iterators.md
-        - Type System: python/advanced/type_system.md
-        - Threading: python/advanced/threading.md
+    - Fundamentals:
+        - Basics:
+            - Data Types: python/basics/data_types.md
+            - Lists & Tuples: python/basics/lists_tuples.md
+            - Dictionaries & Sets: python/basics/dictionaries_sets.md
+            - Objects: python/basics/objects.md
+            - Functions: python/basics/functions.md
+            - Modules: python/basics/modules.md
+            - Errors: python/basics/errors.md
+            - Builtins: python/basics/builtins.md
+            - IO: python/basics/io.md
+            - IO Guide: python/io.md
+            - Structure: python/basics/structure.md
+            - Collections: python/basics/collections.md
+            - Data Structures: python/basics/data_structures.md
+            - Datetime: python/basics/datetime.md
+            - Decorators: python/basics/decorators.md
+            - Performance: python/basics/performance.md
+            - Type Annotations: python/basics/type_annotations.md
+            - Virtualenv & Pip: python/basics/venv_pip.md
+        - Data Types:
+            - Overview: python/data_types/data_types.md
+            - Dict & Set: python/data_types/dic_set.md
+            - List & Tuple: python/data_types/list_tuple.md
+            - Object: python/data_types/object.md
+        - Functions:
+            - Overview: python/functions/index.md
+            - More: python/functions/more.md
+    - OOP & Data Model:
+        - Classes: python/classes/classes.md
+        - Classes (Advanced): python/advanced/classes.md
+        - Data Model: python/classes/data_model.md
+        - Data Model (Advanced): python/advanced/data_model.md
+        - Descriptors: python/classes/descriptors.md
+        - Descriptors (Advanced): python/advanced/descriptors.md
+        - Iterators: python/classes/iterators.md
+        - Iterators (Advanced): python/advanced/iterators.md
+    - Concurrency:
         - Async Programming: python/advanced/async.md
-        - Decorators: python/advanced/decorators.md
-        - Context Managers: python/advanced/context_managers.md
+        - Asyncio (Guide): python/async.md
+        - Async Patterns: python/advanced/async_patterns.md
+        - Custom Awaitables: python/advanced/custom_awaitables.md
+        - Threading: python/advanced/threading.md
+        - Threading (Guide): python/threading/threading.md
+        - Multiprocessing: python/advanced/multiprocessing.md
+    - Standard Library:
+        - Language & Core:
+            - Overview: python/modules/modules.md
+            - Builtins: python/modules/builtins.md
+            - Enum: python/modules/enum.md
+            - Dataclasses: python/modules/dataclasses.md
+            - itertools & functools: python/modules/itertools_functools.md
+            - Regex: python/modules/regex.md
+        - I/O & Files:
+            - IO: python/modules/io.md
+            - Pathlib: python/modules/pathlib.md
+            - Serialization: python/modules/serialization.md
+            - mmap: python/modules/mmap.md
+        - OS & CLI:
+            - Subprocess: python/modules/subprocess.md
+            - CLI: python/modules/cli.md
+            - Logging: python/modules/logging.md
+            - Config: python/modules/config.md
+        - Networking & Security:
+            - Networking: python/modules/networking.md
+            - HTTP Clients: python/modules/http_clients.md
+            - Security: python/modules/security.md
+        - Data & Storage:
+            - SQLite: python/modules/sqlite.md
+            - DB Patterns: python/modules/db_patterns.md
+        - Packaging & Distribution:
+            - Packaging: python/modules/packaging.md
+        - Date & Time:
+            - Datetime & TZ: python/modules/datetime_tz.md
+    - Design & Architecture:
+        - Code Design: python/advanced/code_design.md
+        - SOLID Principles: python/advanced/solid.md
+        - Best Practices: python/advanced/best_practices.md
+        - Structure:
+            - Overview: python/structure/index.md
+            - Code Design: python/structure/code_design.md
+            - Design Patterns: python/structure/dessign_patterns.md
+            - Practices: python/structure/practices.md
+            - SOLID: python/structure/solid.md
+            - Structure: python/structure/structure.md
+    - Testing:
         - Testing: python/advanced/testing.md
         - Pytest Fixtures: python/advanced/pytest_fixtures.md
-        - SOLID Principles: python/advanced/solid.md
-        - Code Design: python/advanced/code_design.md
+        - Test Examples: python/testing/test.md
+    - Advanced Topics:
+        - Decorators: python/advanced/decorators.md
+        - Decorators (Guide): python/decorators/decorators.md
+        - Context Managers: python/advanced/context_managers.md
+        - Context Managers (Guide): python/context_managers/context_managers.md
+        - Errors & ExceptionGroups: python/advanced/errors_exceptiongroups.md
+        - Import Hooks & AST: python/advanced/import_hooks_ast.md
+        - Pattern Matching: python/advanced/pattern_matching.md
+        - Type System: python/advanced/type_system.md
+        - Memory: python/advanced/memory.md
+        - Debug & Performance: python/advanced/debug_perf.md
         - Objects: python/advanced/objects.md
-        - Best Practices: python/advanced/best_practices.md
-    - Classes:
-        - Overview: python/classes/classes.md
-        - Data Model: python/classes/data_model.md
-        - Descriptors: python/classes/descriptors.md
-        - Iterators: python/classes/iterators.md
-    - Context Managers: python/context_managers/context_managers.md
-    - Data Types: 
-        - Overview: python/data_types/data_types.md
-        - Dict & Set: python/data_types/dic_set.md
-        - List & Tuple: python/data_types/list_tuple.md
-        - Object: python/data_types/object.md
-    - Decorators: python/decorators/decorators.md
-    - Functions: python/functions/index.md
-    - Modules:
-        - Builtins: python/modules/builtins.md
-        - IO: python/modules/io.md
-        - Overview: python/modules/modules.md
-    - Structure:
-        - Code Design: python/structure/code_design.md
-        - Design Patterns: python/structure/dessign_patterns.md
-        - Overview: python/structure/index.md
-        - Practices: python/structure/practices.md
-        - SOLID: python/structure/solid.md
-        - Structure: python/structure/structure.md
-    - Async:
-        - asyncio: python/async.md
-    - Threading: python/threading/threading.md
     - From Talks: python/talks/talks.md
-    - Testing: python/testing/test.md
+    - Interesting: python/interesting.md
 - FastAPI:
     - Overview: fastapi/index.md
     - Basics:
@@ -92,28 +133,29 @@ nav:
 - Git:
     - Workflows: git/flows.md
 - Angular:
-    - Rxjs: angular/rxjs.md
+    - RxJS: angular/rxjs.md
     - Tips: angular/tips.md
     - General: angular/expert.md
     - Subjects: angular/subjects.md
 - Setups:
     - Gitlab: setups/install.md
 - Kubernetes:
+    - Overview: kubernetes/index.md
     - Architecture: kubernetes/architecture.md
     - Backup: kubernetes/backup.md
     - Deployments: kubernetes/deployments.md
     - Image Security: kubernetes/image-security.md
     - Lifecycle: kubernetes/lifecycle.md
-    - Maintenance: kubernetes/maintanence.md
+    - Maintenance: kubernetes/maintenance.md
     - Monitoring: kubernetes/monitoring.md
     - Namespaces: kubernetes/namespaces.md
-    - Network: kubernetes/newtwork.md
+    - Network: kubernetes/network.md
     - Pods: kubernetes/pods.md
     - ReplicaSets: kubernetes/replicasets.md
     - Roles: kubernetes/roles.md
     - Security: kubernetes/security.md
     - Services: kubernetes/services.md
-    - Scheduler: kubernetes/sheduler.md
+    - Scheduler: kubernetes/scheduler.md
 - Programming:
     - Code Review: programming/code_review.md
     - Algorithms: programming/algorithms.md
@@ -131,18 +173,19 @@ nav:
 - Odoo:
     - OWL: odoo/owl.md
 - Ansible: ansible/ansible.md
-- Other:
+- Tools:
     - Tmux: tools/tmux.md
-    - Neovim: tools/nvim.md
-    - Neovim Notes: nvim/notes.md
-- Cybersec:
+    - Neovim:
+        - Guide: tools/nvim.md
+        - Notes: nvim/notes.md
+- Cybersecurity:
     - Software Security: cybersecurity/softwaresecurity.md
 - Rust:
     - Types: rust/vars.md
     - Generators: rust/generators.md
     - Objects: rust/object.md
     - Memory: rust/memory.md
-- Daily life:
+- Daily Life:
     - Nutrition: other/nutr.md
     
 
@@ -164,4 +207,3 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
-
