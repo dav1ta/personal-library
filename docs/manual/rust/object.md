@@ -1,145 +1,95 @@
-## Generators and Iterators
+# Async, Concurrency, and Parallelism
 
-### Python
-- **Generators**: Use `yield` for lazy evaluation.
-- **Iterators**: Objects that implement `__iter__` and `__next__`.
+**Overview:** See the consolidated navigation in [Rust Docs Overview](index.md).
 
-```python
-def count_up_to(max):
-    count = 1
-    while count <= max:
-        yield count
-        count += 1
+## Table of Contents
+- Concurrency Model and Send/Sync
+- Threads and Message Passing
+- Shared State: Arc, Mutex, RwLock
+- Async Foundations
+- Tokio Patterns (applies to async-std with minor changes)
+- Cancellation, Timeouts, and Backpressure
+- Blocking and Async Interop
+- Testing Concurrent Code
 
-gen = count_up_to(5)
-for i in gen:
-    print(i)
-```
+## Concurrency Model and Send/Sync
+- Rust prevents data races at compile time. A type is
+  - `Send` if it is safe to move to another thread,
+  - `Sync` if `&T` is safe to share between threads.
+- `Send + 'static` often bounds spawned tasks to avoid borrowed data escaping its scope.
+- `Send`/`Sync` are auto traits; custom unsafe impls are rare and should be justified.
 
-### Rust
-- **Iterators**: Core part of Rust, implemented via the `Iterator` trait.
-- **No direct equivalent to `yield`**: But can achieve similar functionality with iterator adaptors or by implementing `Iterator` trait.
-
-```rust
-struct CountUpTo {
-    count: u32,
-    max: u32,
-}
-
-impl Iterator for CountUpTo {
-    type Item = u32;
-
-    fn next(&mut self) -> Option<Self::Item> {
-        if self.count <= self.max {
-            let ret = self.count;
-            self.count += 1;
-            Some(ret)
-        } else {
-            None
-        }
-    }
-}
-
-let counter = CountUpTo { count: 1, max: 5 };
-for i in counter {
-    println!("{}", i);
-}
-```
-
-## Context Managers
-
-### Python
-- **Context Managers**: Use `with` statement to automatically manage resources.
-
-```python
-with open('file.txt', 'r') as f:
-    file_contents = f.read()
-```
-
-### Rust
-- **RAII (Resource Acquisition Is Initialization)**: Resources are released when the variable goes out of scope, similar to context managers. Uses the `Drop` trait.
-
-```rust
-{
-    let f = File::open("file.txt").expect("Unable to open file");
-    // Use file
-} // `f` goes out of scope and is automatically closed here
-```
-
-## Asynchronous Programming
-
-### Python
-- **Async/Await**: Python 3.5+ supports `async` and `await` for asynchronous programming.
-
-```python
-import asyncio
-
-async def fetch_data():
-    await asyncio.sleep(2)
-    return {'data': 1}
-
-async def main():
-    result = await fetch_data()
-    print(result)
-
-asyncio.run(main())
-```
-
-### Rust
-- **Async/Await**: Rust also supports `async` and `await`, often used with `tokio` or `async-std`.
-
-```rust
-use tokio;
-
-#[tokio::main]
-async fn main() {
-    let data = fetch_data().await;
-    println!("{:?}", data);
-}
-
-async fn fetch_data() -> Result<u32, &'static str> {
-    // Simulate an async operation
-    tokio::time::sleep(tokio::time::Duration::from_secs(2)).await;
-    Ok(1)
-}
-```
-
-## Concurrency
-
-### Python
-- **Threading and Multiprocessing**: Due to GIL, multiprocessing is often used for CPU-bound tasks.
-
-```python
-from multiprocessing import Process
-
-def process_data(data):
-    # Process data
-    pass
-
-if __name__ == "__main__":
-    p = Process(target=process_data, args=(data,))
-    p.start()
-    p.join()
-```
-
-### Rust
-- **Concurrency**: Rust's ownership and type system allow for safe concurrency without a GIL. Uses `std::thread`, `tokio` for async operations.
-
+## Threads and Message Passing
+- Spawn threads with `std::thread::spawn` and join via `JoinHandle::join`.
 ```rust
 use std::thread;
-
-fn process_data(data: &str) {
-    // Process data
+let handle = thread::spawn(|| 2 + 2);
+let result = handle.join().unwrap();
+```
+- Prefer message passing (`std::sync::mpsc` or `crossbeam::channel`) to reduce shared mutable state:
+```rust
+let (tx, rx) = std::sync::mpsc::channel();
+for i in 0..4 {
+    let tx = tx.clone();
+    std::thread::spawn(move || tx.send(i * i).unwrap());
 }
-
-fn main() {
-    let data = "data";
-    let handle = thread::spawn(move || {
-        process_data(data);
-    });
-
-    handle.join().unwrap();
+for val in rx.iter().take(4) {
+    println!("{val}");
 }
 ```
 
-Continuing with advanced examples, each section showcases the unique aspects and best practices of Python and Rust in handling complex programming scenarios.
+## Shared State: Arc, Mutex, RwLock
+- Use `Arc<T>` for shared ownership across threads; combine with `Mutex<T>` for mutable access:
+```rust
+use std::{sync::{Arc, Mutex}, thread};
+let counter = Arc::new(Mutex::new(0));
+let mut handles = vec![];
+for _ in 0..8 {
+    let c = Arc::clone(&counter);
+    handles.push(thread::spawn(move || {
+        let mut n = c.lock().unwrap();
+        *n += 1;
+    }));
+}
+for h in handles { h.join().unwrap(); }
+println!("count = {}", *counter.lock().unwrap());
+```
+- `RwLock` allows many readers or one writer; avoid if write-heavy.
+- Avoid deadlocks by minimizing lock scope and keeping lock acquisition order consistent.
+
+## Async Foundations
+- `async fn` returns `impl Future`; execution requires a runtime.
+- Polling is cooperative; await points yield control.
+- Use `FutureExt::map`/`then` (from `futures`) for combinators, or structured concurrency with `tokio::try_join!`.
+
+## Tokio Patterns
+- Entry point: `#[tokio::main] async fn main() -> anyhow::Result<()> { ... }`
+- Spawning: `tokio::spawn(async move { /* ... */ })` (tasks must be `Send + 'static`).
+- Async I/O: `TcpStream`, `UdpSocket`, `File`, `AsyncRead/AsyncWrite` via `tokio::io`.
+- Concurrency control:
+  - `tokio::sync::mpsc` for channels.
+  - `Semaphore` to cap concurrency.
+  - `Mutex`/`RwLock` in `tokio::sync` are async-aware.
+- Timers and cancellation:
+```rust
+use tokio::{time, select};
+select! {
+    _ = time::sleep(Duration::from_secs(1)) => println!("timeout"),
+    res = do_work() => println!("done: {:?}", res),
+}
+```
+
+## Cancellation, Timeouts, and Backpressure
+- Cancellation is cooperative; dropping a `JoinHandle` cancels the task. Ensure tasks check for shutdown signals (channels, `watch`, `Notify`).
+- Apply timeouts with `tokio::time::timeout(duration, fut)`; handle `Elapsed`.
+- For streams, apply backpressure with bounded channels or `buffer_unordered`/`buffered` to cap in-flight tasks.
+
+## Blocking and Async Interop
+- Do not perform blocking I/O or CPU-heavy work on the async runtime threads; offload with `tokio::task::spawn_blocking` or a dedicated thread pool.
+- Bridging sync APIs: wrap in `spawn_blocking` or expose a sync facade for callers not on a runtime.
+- Mixing runtimes is rarely necessary; prefer one runtime per process. For synchronous binaries, use `tokio::runtime::Runtime` when embedding.
+
+## Testing Concurrent Code
+- Use `#[tokio::test]` or `#[actix_rt::test]` for async tests.
+- In threaded tests, coordinate with channels instead of sleeps; if timing matters, prefer `loom` for deterministic concurrency testing.
+- Validate absence of deadlocks by keeping tests short-lived and enabling `RUST_BACKTRACE=1` for panics. Use `cargo test -- --nocapture` to see log output.

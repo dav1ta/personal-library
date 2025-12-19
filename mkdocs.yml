@@ -180,11 +180,17 @@ nav:
         - Notes: manual/nvim/notes.md
 - Cybersecurity:
     - Software Security: manual/cybersecurity/softwaresecurity.md
-- Rust:
-    - Types: manual/rust/vars.md
-    - Generators: manual/rust/generators.md
-    - Objects: manual/rust/object.md
-    - Memory: manual/rust/memory.md
+  - Rust:
+      - Overview: manual/rust/index.md
+      - Fundamentals: manual/rust/vars.md
+      - Data & Generics: manual/rust/generators.md
+      - Async & Concurrency: manual/rust/object.md
+      - Memory & Tooling: manual/rust/memory.md
+      - Stdlib Recipes: manual/rust/stdlib_recipes.md
+      - Cargo & Tooling: manual/rust/tooling_cargo.md
+      - Testing: manual/rust/testing.md
+      - CLI / Web / DB: manual/rust/cli_web_db.md
+      - Async Patterns: manual/rust/async_patterns.md
 - Daily Life:
     - Nutrition: manual/other/nutr.md
     

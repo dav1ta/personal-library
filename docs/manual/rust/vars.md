@@ -1,152 +1,107 @@
-# Rust for Python Developers: A Comparative Guide with Advanced Examples
+# Rust Fundamentals
 
-## Variables and Data Types
+**Overview:** See the consolidated navigation in [Rust Docs Overview](index.md).
 
-### Python
-- **Dynamic Typing**: Variables can change types.
-- **Types**: `int`, `float`, `str`, `bool`, complex, `NoneType`.
-- **Collections**: `list`, `tuple`, `dict`, `set`.
+## Table of Contents
+- Getting Set Up
+- Project Layout
+- Values, Mutability, and Shadowing
+- Core Types
+- Ownership and Borrowing
+- Control Flow and Pattern Matching
+- Functions, Closures, and Methods
+- Modules, Visibility, and Crates
+- Idioms and Pitfalls
 
-```python
-x = 100  # Integer
-x = "Hello, World!"  # Now a string
-data = {'key': 'value', 'number': 42}
-```
+## Getting Set Up
+- Install with `rustup` and pick a toolchain: `rustup toolchain install stable` or `rustup default stable`.
+- Add components you’ll use daily: `rustup component add clippy rustfmt rust-analyzer`.
+- Create a new project: `cargo new hello-rust` (binary) or `cargo new --lib mylib`.
 
-### Rust
-- **Static Typing**: Variable types are known at compile time.
-- **Scalar Types**: `i32`, `f64`, `bool`, `char`.
-- **Compound Types**: Tuples, Arrays.
-- **Mutability**: Variables are immutable by default. Use `mut` for mutability.
-- **Ownership and Borrowing**: Core features for memory safety.
+## Project Layout
+- `src/main.rs` or `src/lib.rs` are entry points; integration tests live in `tests/`, examples in `examples/`, benches in `benches/`.
+- Prefer workspaces for multi-crate repos: `Cargo.toml` with `[workspace]` plus member crates in subdirs.
+- Profiles: use `cargo build --release` for optimized binaries; control via `[profile.release]` in `Cargo.toml`.
 
+## Values, Mutability, and Shadowing
+- Bindings are immutable by default: `let x = 1;`.
+- Opt into mutation: `let mut counter = 0; counter += 1;`.
+- Shadowing creates a new binding with the same name; useful for type changes or refinements:
 ```rust
-let x: i32 = 100;
-let mut y = "Hello"; // mutable
-y = "World!";
-let data: HashMap<&str, i32> = [("key", 42)].iter().cloned().collect();
+let spaces = "   ";
+let spaces: usize = spaces.len();
 ```
+- Constants use `const NAME: Type = value;` and are compile-time, globally usable.
 
-## Control Flow
-
-### Python
-- **Loops**: `for`, `while`.
-- **Conditional Statements**: `if`, `elif`, `else`.
-
-```python
-for i in range(5):
-    print(i)
-
-if x > 0:
-    print("Positive")
-elif x == 0:
-    print("Zero")
-else:
-    print("Negative")
-```
-
-### Rust
-- **Loops**: `loop`, `while`, `for`.
-- **Conditional Statements**: `if`, `else`, `match` for pattern matching.
-
+## Core Types
+- Scalars: `i32`, `u64`, `f64`, `bool`, `char` (Unicode scalar), and sized pointers like `usize`.
+- Strings: `String` (owned, growable) vs `&str` (borrowed slice). Convert with `let s = "hi".to_string();`.
+- Collections: `Vec<T>`, `VecDeque<T>`, `HashMap<K, V>`, `BTreeMap<K, V>`, `HashSet<T>`, `BTreeSet<T>`. Choose BTree* when deterministic ordering matters.
+- Tuples and arrays: tuples can mix types; arrays have fixed length and element type.
+- Option and Result:
 ```rust
-for i in 0..5 {
-    println!("{}", i);
-}
-
-match x {
-    0 => println!("Zero"),
-    _ if x > 0 => println!("Positive"),
-    _ => println!("Negative"),
-}
+let maybe: Option<i32> = Some(5);
+let parsed: Result<u32, std::num::ParseIntError> = "42".parse();
 ```
 
-## Functions and Methods
-
-### Python
-- **Defining Functions**: Use `def`.
-- **Parameters & Return Types**: Dynamically typed.
-- **First-Class Objects**: Functions can be passed around.
-
-```python
-def add(a, b):
-    return a + b
-
-class MyClass:
-    def method(self):
-        print("Method called")
-```
-
-### Rust
-- **Defining Functions**: Use `fn`, specify types.
-- **Parameters & Return Types**: Statically typed.
-- **First-Class Objects**: Functions can be variables or arguments.
-
+## Ownership and Borrowing
+- Each value has a single owner; moving transfers ownership:
 ```rust
-fn add(a: i32, b: i32) -> i32 {
-    a + b
-}
-
-struct MyClass;
-
-impl MyClass {
-    fn method(&self) {
-        println!("Method called");
-    }
-}
+let a = String::from("hi");
+let b = a;            // a is moved; cannot be used
 ```
-
-## Error Handling
-
-### Python
-- **Exceptions**: Use `try`, `except`, `finally`.
-
-```python
-try:
-    result = risky_operation()
-except Exception as e:
-    print(f"Error: {e}")
-finally:
-    clean_up()
-```
-
-### Rust
-- **Result and Option**: No exceptions, use `Result<T, E>`, `Option<T>` for error handling.
-
+- Types that implement `Copy` (numbers, bool, chars, `&T`) are duplicated on assignment.
+- Borrowing allows temporary access without transfer:
 ```rust
-fn risky_operation() -> Result<i32, &'static str> {
-    if success {
-        Ok(42)
-    } else {
-        Err("Failed")
-    }
-}
-
-match risky_operation() {
-    Ok(n) => println!("Success: {}", n),
-    Err(e) => println!("Error: {}", e),
-}
+fn len(s: &String) -> usize { s.len() }
+fn push(s: &mut String) { s.push('!'); }
 ```
+- Borrow rules: at any time either many immutable borrows **or** one mutable borrow; all borrows must outlive their uses.
+- Slices (`&[T]`, `&str`) are borrowed views into contiguous data.
+- RAII and `Drop`: resources cleaned automatically when the owner goes out of scope.
 
-## Collections
-
-### Python
-- Lists, dictionaries, and sets with dynamic typing and various methods.
-
-```python
-my_list = [1, 2, 3]
-my_dict = {"key": "value"}
-my_set = {1, 2, 3}
-```
-
-### Rust
-- Vectors, hash maps, and sets with static typing and safety.
-
+## Control Flow and Pattern Matching
+- Expressions everywhere: `let y = if cond { 1 } else { 0 };`
+- `loop`, `while`, `for` with iterators:
 ```rust
-let my_vec = vec![1, 2, 3];
-let mut my_map: HashMap<&str, &str> = HashMap::new();
-my_map.insert("key", "value");
-let my_set: HashSet<i32> = [1, 2, 3].iter().cloned().collect();
+for (i, v) in vec.iter().enumerate() {
+    println!("{i}: {v}");
+}
+```
+- Pattern matching is exhaustive and refines types:
+```rust
+match parsed {
+    Ok(n) if n % 2 == 0 => println!("even {n}"),
+    Ok(n) => println!("odd {n}"),
+    Err(e) => eprintln!("parse error: {e}"),
+}
+```
+- `if let` / `while let` handle common Option/Result cases concisely.
+
+## Functions, Closures, and Methods
+- Functions declare parameter and return types explicitly: `fn add(a: i32, b: i32) -> i32 { a + b }`.
+- Closures capture environment by reference, mutable reference, or move:
+```rust
+let mut n = 0;
+let mut inc = || { n += 1; n };
+```
+- Methods live in `impl` blocks; use `Self` to reference the type:
+```rust
+struct Point { x: f64, y: f64 }
+impl Point {
+    fn origin() -> Self { Self { x: 0.0, y: 0.0 } }
+    fn norm(&self) -> f64 { (self.x.powi(2) + self.y.powi(2)).sqrt() }
+}
 ```
 
-This structure outlines a comprehensive, example-driven comparison between Python and Rust, focusing on advanced aspects of each topic. Proceed by fleshing out each section with detailed examples and explanations.
+## Modules, Visibility, and Crates
+- Split files with `mod foo;` in `lib.rs`/`main.rs` and a matching `foo.rs` or `foo/mod.rs`.
+- Visibility is private by default; export with `pub`, restrict with `pub(crate)` or `pub(super)`.
+- Bring names into scope with `use`; re-export with `pub use` to create a curated public API.
+- Organize external dependencies via `[dependencies]` in `Cargo.toml`; prefer semver-compatible caret versions like `serde = "1"` unless pinning.
+
+## Idioms and Pitfalls
+- Prefer `?` for error propagation and `Result<T, E>` for recoverable errors.
+- Avoid cloning by default; reach for `.clone()` only when ownership truly must be duplicated.
+- Favor iterators over indexed loops; use `into_iter` to consume, `iter` to borrow, `iter_mut` to mutably borrow.
+- In async code, avoid blocking calls (e.g., `std::thread::sleep`) inside async functions; use runtime-aware versions (e.g., `tokio::time::sleep`).
