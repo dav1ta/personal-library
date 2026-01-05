@@ -106,6 +106,53 @@ nav:
         - Objects: manual/python/advanced/objects.md
     - From Talks: manual/python/talks/talks.md
     - Interesting: manual/python/interesting.md
+- Go:
+    - Overview: manual/go/index.md
+    - Fundamentals:
+        - Basics:
+            - Types & Literals: manual/go/basics/types.md
+            - Arrays & Slices: manual/go/basics/arrays_slices.md
+            - Maps & Sets: manual/go/basics/maps_sets.md
+            - Structs: manual/go/basics/structs.md
+            - Functions: manual/go/basics/functions.md
+            - Packages & Modules: manual/go/basics/packages.md
+            - Errors: manual/go/basics/errors.md
+            - Builtins: manual/go/basics/builtins.md
+            - IO: manual/go/basics/io.md
+            - Pointers: manual/go/basics/pointers.md
+            - Time: manual/go/basics/time.md
+            - Project Structure: manual/go/basics/structure.md
+            - Performance: manual/go/basics/performance.md
+            - Environment & Modules: manual/go/basics/env_modules.md
+    - Types & Interfaces:
+        - Structs & Methods: manual/go/types/structs_methods.md
+        - Interfaces: manual/go/types/interfaces.md
+        - Embedding: manual/go/types/embedding.md
+    - Concurrency:
+        - Overview: manual/go/concurrency/overview.md
+        - Channels & Select: manual/go/concurrency/channels_select.md
+        - Sync + Context: manual/go/concurrency/sync_context.md
+        - Patterns: manual/go/concurrency/patterns.md
+    - Standard Library:
+        - Overview: manual/go/modules/overview.md
+        - Core & Text: manual/go/modules/core.md
+        - I/O & Files: manual/go/modules/io_files.md
+        - OS & CLI: manual/go/modules/os_cli.md
+        - Networking & Data: manual/go/modules/net_data.md
+    - Design & Architecture:
+        - Overview: manual/go/structure/index.md
+        - Code Design: manual/go/structure/code_design.md
+        - Practices: manual/go/structure/practices.md
+        - Project Layout: manual/go/structure/structure.md
+    - Testing:
+        - Testing: manual/go/testing/testing.md
+        - Benchmarks & Fuzzing: manual/go/testing/bench_fuzz.md
+        - Test Patterns: manual/go/testing/test_patterns.md
+    - Advanced Topics:
+        - Generics: manual/go/advanced/generics.md
+        - Reflection: manual/go/advanced/reflection.md
+        - Unsafe: manual/go/advanced/unsafe.md
+        - Memory & Tooling: manual/go/advanced/memory_tooling.md
 - FastAPI:
     - Overview: manual/fastapi/index.md
     - Basics:
