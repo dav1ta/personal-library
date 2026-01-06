@@ -7,3 +7,5 @@
 - Pass `context.Context` as the first parameter when needed.
 - Avoid global state; inject dependencies.
 - Use channels for ownership transfer, mutexes for shared state.
+
+Next: [Project Layout](structure.md)

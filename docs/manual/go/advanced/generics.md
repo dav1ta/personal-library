@@ -3,6 +3,8 @@
 Go supports type parameters for functions and types.
 
 ## Generic Function
+A function that works over multiple types using type parameters.
+
 ```go
 func Map[T any, U any](in []T, f func(T) U) []U {
     out := make([]U, len(in))
@@ -14,6 +16,8 @@ func Map[T any, U any](in []T, f func(T) U) []U {
 ```
 
 ## Constraints
+Restrict type parameters to a set of allowed operations.
+
 ```go
 type Set[T comparable] map[T]struct{}
 
@@ -23,5 +27,9 @@ type Number interface {
 ```
 
 ## When to Use
+Guidance on when this approach is appropriate.
+
 - Use generics for reusable algorithms and data structures.
 - Avoid generics when a simple interface or concrete type is clearer.
+
+Next: [Reflection](reflection.md)

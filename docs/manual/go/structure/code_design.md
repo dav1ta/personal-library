@@ -4,12 +4,16 @@
 Expose only what you need. A small surface area is easier to maintain.
 
 ## Accept Interfaces, Return Concrete Types
+Design APIs to accept interfaces for flexibility while returning concrete types for clarity.
+
 ```go
 func NewStore(db *sql.DB) *Store { ... }
 func (s *Store) List(ctx context.Context) ([]Item, error) { ... }
 ```
 
 ## Functional Options
+Option functions for flexible configuration APIs.
+
 ```go
 type Client struct {
     timeout time.Duration
@@ -32,3 +36,5 @@ func NewClient(opts ...Option) *Client {
 
 ## Error Boundaries
 Handle errors at boundaries. Keep inner layers pure and simple.
+
+Next: [Practices](practices.md)

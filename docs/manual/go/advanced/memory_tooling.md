@@ -9,6 +9,8 @@ Tips:
 - Reuse buffers in hot paths.
 
 ## Profiling with pprof
+Profile CPU and memory usage with pprof.
+
 ```go
 import _ "net/http/pprof"
 
@@ -23,6 +25,10 @@ go tool pprof http://localhost:6060/debug/pprof/heap
 ```
 
 ## Build and Tooling
+Build, test, and tooling commands for Go projects.
+
 - `gofmt` for formatting
 - `go vet` for static checks
 - `go test` for tests and benchmarks
+
+Next: [Overview](../index.md)

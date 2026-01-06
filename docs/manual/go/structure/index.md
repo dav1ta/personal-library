@@ -6,3 +6,5 @@ Sections:
 - Code design and API shape
 - Practices and conventions
 - Project layout
+
+Next: [Code Design](code_design.md)

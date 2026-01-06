@@ -11,8 +11,11 @@ Organized into: basics, types & interfaces, concurrency, real-world patterns, st
 - `advanced/` covers generics, reflection, unsafe, and memory/tooling.
 
 ## Table of Contents
+Quick links to sections in this guide.
 
 ### Basics
+Core language fundamentals and first steps.
+
 - [Types & Literals](basics/types.md)
 - [Arrays & Slices](basics/arrays_slices.md)
 - [Maps & Sets](basics/maps_sets.md)
@@ -29,17 +32,23 @@ Organized into: basics, types & interfaces, concurrency, real-world patterns, st
 - [Environment & Modules](basics/env_modules.md)
 
 ### Types & Interfaces
+Links to types and interfaces topics.
+
 - [Structs & Methods](types/structs_methods.md)
 - [Interfaces](types/interfaces.md)
 - [Embedding](types/embedding.md)
 
 ### Concurrency
+Links to goroutines, channels, and sync patterns.
+
 - [Overview](concurrency/overview.md)
 - [Channels & Select](concurrency/channels_select.md)
 - [Sync + Context](concurrency/sync_context.md)
 - [Patterns](concurrency/patterns.md)
 
 ### Real-World Patterns
+Links to practical patterns for production systems.
+
 - [Web Services](patterns/web.md)
 - [Data Access](patterns/data.md)
 - [Systems](patterns/systems.md)
@@ -48,6 +57,8 @@ Organized into: basics, types & interfaces, concurrency, real-world patterns, st
 - [Libraries](patterns/libraries.md)
 
 ### Standard Library
+Links to standard library overviews and modules.
+
 - [Overview](modules/overview.md)
 - [Core & Text](modules/core.md)
 - [I/O & Files](modules/io_files.md)
@@ -55,18 +66,26 @@ Organized into: basics, types & interfaces, concurrency, real-world patterns, st
 - [Networking & Data](modules/net_data.md)
 
 ### Design & Architecture
+Links to design and project structure guidance.
+
 - [Overview](structure/index.md)
 - [Code Design](structure/code_design.md)
 - [Practices](structure/practices.md)
 - [Project Layout](structure/structure.md)
 
 ### Testing
+Links to testing topics and patterns.
+
 - [Testing](testing/testing.md)
 - [Benchmarks & Fuzzing](testing/bench_fuzz.md)
 - [Test Patterns](testing/test_patterns.md)
 
 ### Advanced
+Links to advanced Go topics and deeper dives.
+
 - [Generics](advanced/generics.md)
 - [Reflection](advanced/reflection.md)
 - [Unsafe](advanced/unsafe.md)
 - [Memory & Tooling](advanced/memory_tooling.md)
+
+Next: [Types & Literals](basics/types.md)

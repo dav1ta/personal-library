@@ -3,6 +3,8 @@
 A package is a directory of Go files with the same `package` name. A module is a versioned collection of packages defined by `go.mod`.
 
 ## Imports
+Import packages and use aliases or dot imports.
+
 ```go
 package main
 
@@ -21,6 +23,8 @@ func NewClient() *Client { return &Client{} }
 ```
 
 ## init
+Package init functions run before main.
+
 ```go
 func init() {
     // runs before main, avoid heavy work here
@@ -28,6 +32,8 @@ func init() {
 ```
 
 ## Module Basics
+Module paths, versions, and go.mod basics.
+
 ```bash
 go mod init example.com/app
 go mod tidy
@@ -35,3 +41,5 @@ go mod tidy
 
 ## internal Packages
 Code under `internal/` is importable only from within the module.
+
+Next: [Errors](errors.md)

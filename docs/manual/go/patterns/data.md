@@ -3,6 +3,8 @@
 Practical patterns for `database/sql` usage.
 
 ## Open and Configure Pool
+Open a DB and tune pool size and lifetimes.
+
 ```go
 db, err := sql.Open("postgres", dsn)
 if err != nil {
@@ -20,6 +22,8 @@ if err := db.PingContext(ctx); err != nil {
 ```
 
 ## Query Row
+Fetch a single row and scan into variables.
+
 ```go
 var u User
 err := db.QueryRowContext(ctx, "select id, name from users where id=$1", id).
@@ -33,6 +37,8 @@ if err != nil {
 ```
 
 ## Query Many Rows
+Iterate over result sets and scan rows.
+
 ```go
 rows, err := db.QueryContext(ctx, "select id, name from users where active=$1", true)
 if err != nil {
@@ -52,6 +58,8 @@ if err := rows.Err(); err != nil {
 ```
 
 ## Transactions
+Use transactions for atomic database changes.
+
 ```go
 tx, err := db.BeginTx(ctx, nil)
 if err != nil {
@@ -66,6 +74,10 @@ return tx.Commit()
 ```
 
 ## Tips
+Practical tips and gotchas.
+
 - Always use context-aware methods.
 - Close rows quickly; do not defer inside loops.
 - Handle `sql.ErrNoRows` explicitly.
+
+Next: [Systems](systems.md)

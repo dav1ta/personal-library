@@ -3,6 +3,8 @@
 Practical patterns for building HTTP services with the standard library.
 
 ## Server with Timeouts
+Configure an HTTP server with sensible timeouts.
+
 ```go
 mux := http.NewServeMux()
 mux.HandleFunc("/health", health)
@@ -20,6 +22,8 @@ go func() { _ = srv.ListenAndServe() }()
 ```
 
 ## JSON Input and Output
+Decode and encode JSON safely in handlers.
+
 ```go
 func decodeJSON(w http.ResponseWriter, r *http.Request, v any) error {
     r.Body = http.MaxBytesReader(w, r.Body, 1<<20) // 1 MB
@@ -36,6 +40,8 @@ func writeJSON(w http.ResponseWriter, status int, v any) {
 ```
 
 ## Middleware Chain
+Compose middleware around HTTP handlers.
+
 ```go
 type Middleware func(http.Handler) http.Handler
 
@@ -56,6 +62,8 @@ func Log(next http.Handler) http.Handler {
 ```
 
 ## Request Timeouts
+Enforce per-request timeouts with context.
+
 ```go
 func handler(w http.ResponseWriter, r *http.Request) {
     ctx, cancel := context.WithTimeout(r.Context(), 2*time.Second)
@@ -66,6 +74,8 @@ func handler(w http.ResponseWriter, r *http.Request) {
 ```
 
 ## Graceful Shutdown
+Stop servers cleanly while finishing in-flight requests.
+
 ```go
 stop := make(chan os.Signal, 1)
 signal.Notify(stop, os.Interrupt, syscall.SIGTERM)
@@ -75,3 +85,5 @@ ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 defer cancel()
 _ = srv.Shutdown(ctx)
 ```
+
+Next: [Data Access](data.md)

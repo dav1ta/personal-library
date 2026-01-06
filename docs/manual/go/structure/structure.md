@@ -16,3 +16,5 @@ myapp/
 Guidelines:
 - Keep `main` small; push logic into packages.
 - Keep package boundaries clear and stable.
+
+Next: [Testing](../testing/testing.md)

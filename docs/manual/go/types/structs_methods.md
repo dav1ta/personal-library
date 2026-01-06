@@ -3,6 +3,8 @@
 Methods attach behavior to types.
 
 ## Defining Methods
+Attach methods to types to add behavior.
+
 ```go
 type Counter struct{ n int }
 
@@ -11,10 +13,14 @@ func (c Counter) Value() int { return c.n }
 ```
 
 ## Pointer vs Value Receivers
+Choose receivers based on mutability and size.
+
 - Use pointer receivers to mutate or avoid copying large structs.
 - Value receivers work for small, immutable types.
 
 ## Method Sets
+Which methods are available on a type or pointer.
+
 ```go
 type Reader interface {
     Read(p []byte) (int, error)
@@ -29,8 +35,12 @@ r = &File{} // ok
 ```
 
 ## Constructor Pattern
+Create constructors to enforce invariants and defaults.
+
 ```go
 func NewCounter() *Counter {
     return &Counter{}
 }
 ```
+
+Next: [Interfaces](interfaces.md)

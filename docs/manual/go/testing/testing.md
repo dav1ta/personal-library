@@ -3,6 +3,8 @@
 Go uses the `testing` package with `go test`.
 
 ## Basic Test
+A minimal unit test structure using the testing package.
+
 ```go
 func TestAdd(t *testing.T) {
     if Add(1, 2) != 3 {
@@ -12,6 +14,8 @@ func TestAdd(t *testing.T) {
 ```
 
 ## Table-Driven Tests
+Use tables to cover many test cases.
+
 ```go
 func TestParse(t *testing.T) {
     cases := []struct {
@@ -34,6 +38,8 @@ func TestParse(t *testing.T) {
 ```
 
 ## Helpers
+Helper functions to reduce test boilerplate.
+
 ```go
 func must(t *testing.T, err error) {
     t.Helper()
@@ -42,3 +48,5 @@ func must(t *testing.T, err error) {
     }
 }
 ```
+
+Next: [Benchmarks & Fuzzing](bench_fuzz.md)

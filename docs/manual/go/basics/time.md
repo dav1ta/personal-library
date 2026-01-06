@@ -3,6 +3,8 @@
 Go uses the `time` package for timestamps, durations, and timers.
 
 ## Time and Duration
+Work with time.Time, time.Duration, and arithmetic.
+
 ```go
 now := time.Now()
 deadline := now.Add(2 * time.Hour)
@@ -21,7 +23,11 @@ out := t.Format(time.RFC3339)
 ```
 
 ## Timeouts
+Apply timeouts to operations and requests.
+
 ```go
 ctx, cancel := context.WithTimeout(context.Background(), 2*time.Second)
 defer cancel()
 ```
+
+Next: [Project Structure](structure.md)

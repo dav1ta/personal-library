@@ -3,6 +3,8 @@
 Pointers let you share and mutate values.
 
 ## Basics
+Core language fundamentals and first steps.
+
 ```go
 x := 10
 px := &x   // *int
@@ -20,12 +22,16 @@ func (c Counter) Value() int { return c.n }
 ```
 
 ## new vs &
+Use new to allocate and & to take addresses.
+
 ```go
 p1 := new(int) // zeroed int
 p2 := &User{}  // literal
 ```
 
 ## Common Pitfall: Loop Variable Address
+Why taking the address of a loop variable can be surprising.
+
 ```go
 nums := []int{1, 2, 3}
 ptrs := []*int{}
@@ -34,3 +40,5 @@ for _, v := range nums {
     ptrs = append(ptrs, &v)
 }
 ```
+
+Next: [Time](time.md)

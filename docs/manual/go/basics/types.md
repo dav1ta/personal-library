@@ -3,6 +3,8 @@
 Practical overview of Go's basic and composite types.
 
 ## Basic Types
+Built-in numeric, boolean, and string types in Go.
+
 - bool
 - int, int8, int16, int32, int64
 - uint, uint8 (byte), uint16, uint32, uint64, uintptr
@@ -23,6 +25,8 @@ var r rune = 'a'
 ```
 
 ## Zero Values
+Default values for types when not initialized.
+
 ```go
 var i int            // 0
 var s string         // ""
@@ -32,6 +36,8 @@ var m map[string]int // nil
 ```
 
 ## Composite Types
+Arrays, slices, maps, and structs and how they compose.
+
 - array: fixed length
 - slice: dynamic view over an array
 - map: hash table
@@ -52,6 +58,8 @@ var u User
 ```
 
 ## Literals and Inference
+Use literals and type inference to keep code concise.
+
 ```go
 x := 10          // int
 y := 3.14        // float64
@@ -61,6 +69,8 @@ m := map[string]int{"a": 1}
 ```
 
 ## Conversions (Explicit Only)
+Go requires explicit conversions between different types.
+
 ```go
 var a int = 10
 var b int64 = int64(a)
@@ -68,6 +78,8 @@ var f float64 = float64(a)
 ```
 
 ## Defined Types vs Aliases
+How defined types differ from aliases and why it matters.
+
 ```go
 type UserID int      // new defined type
 type Bytes = []byte  // alias
@@ -83,3 +95,5 @@ const Pi = 3.14159
 var f64 float64 = Pi
 var f32 float32 = Pi
 ```
+
+Next: [Arrays & Slices](arrays_slices.md)

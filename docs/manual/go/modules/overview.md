@@ -7,3 +7,5 @@ Key areas:
 - I/O & files: `io`, `bufio`, `os`, `io/fs`, `filepath`, `encoding/*`
 - OS & CLI: `log`, `flag`, `os/exec`
 - Networking & data: `net/http`, `net`, `crypto/*`, `database/sql`
+
+Next: [Core & Text](core.md)

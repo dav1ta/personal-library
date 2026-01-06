@@ -1,6 +1,8 @@
 # Benchmarks and Fuzzing
 
 ## Benchmarks
+Measure performance with testing.B benchmarks.
+
 ```go
 func BenchmarkEncode(b *testing.B) {
     for i := 0; i < b.N; i++ {
@@ -26,6 +28,8 @@ go test -bench . -benchmem
 ```
 
 ## Fuzzing
+Coverage-guided tests to find edge cases.
+
 ```go
 func FuzzParse(f *testing.F) {
     f.Add("1")
@@ -41,3 +45,5 @@ Run:
 ```bash
 go test -fuzz=FuzzParse
 ```
+
+Next: [Test Patterns](test_patterns.md)

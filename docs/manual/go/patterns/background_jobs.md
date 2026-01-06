@@ -3,6 +3,8 @@
 Use background jobs for slow, retryable, or non-user-facing work.
 
 ## Simple In-Process Queue
+Basic in-memory queue for background work.
+
 ```go
 type Job func(context.Context) error
 
@@ -30,6 +32,8 @@ func StartWorkers(ctx context.Context, n int, jobs <-chan Job) *sync.WaitGroup {
 ```
 
 ## Retry with Backoff + Jitter
+Add jitter to backoff to avoid synchronized retries.
+
 ```go
 func Retry(ctx context.Context, attempts int, base time.Duration, fn func() error) error {
     var err error
@@ -52,6 +56,8 @@ func Retry(ctx context.Context, attempts int, base time.Duration, fn func() erro
 ```
 
 ## Scheduled Jobs
+Run periodic jobs with tickers or schedulers.
+
 ```go
 ticker := time.NewTicker(5 * time.Minute)
 defer ticker.Stop()
@@ -67,9 +73,13 @@ for {
 ```
 
 ## Real-World Rules
+Operational rules that keep background jobs reliable.
+
 - Make jobs idempotent; retries happen.
 - Add deduplication keys for long-running tasks.
 - If you need durability, use a persistent queue (Redis, DB, Kafka).
 - Use a dead-letter queue for poison jobs.
 
 For durable jobs, see [Common Libraries](libraries.md).
+
+Next: [Libraries](libraries.md)

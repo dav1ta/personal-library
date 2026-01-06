@@ -3,6 +3,8 @@
 Functions are first-class values and support multiple return values.
 
 ## Basic Declaration
+How to declare a function with parameters and a return type.
+
 ```go
 func Add(x, y int) int {
     return x + y
@@ -10,6 +12,8 @@ func Add(x, y int) int {
 ```
 
 ## Multiple Returns
+Return multiple values and handle errors idiomatically.
+
 ```go
 func Split(s string) (string, string) {
     parts := strings.SplitN(s, ":", 2)
@@ -21,6 +25,7 @@ func Split(s string) (string, string) {
 ```
 
 ## Named Returns
+Named return values act like predeclared variables; a bare `return` uses their current values.
 ```go
 func Div(a, b float64) (q, r float64) {
     q = a / b
@@ -30,6 +35,8 @@ func Div(a, b float64) (q, r float64) {
 ```
 
 ## Variadic Functions
+Functions that accept a variable number of arguments.
+
 ```go
 func Sum(nums ...int) int {
     total := 0
@@ -41,6 +48,8 @@ func Sum(nums ...int) int {
 ```
 
 ## Closures
+Functions that capture variables from their surrounding scope.
+
 ```go
 func Counter() func() int {
     n := 0
@@ -52,6 +61,7 @@ func Counter() func() int {
 ```
 
 ## Defer
+`defer` schedules a function call to run when the surrounding function returns; useful for cleanup.
 ```go
 func ReadAll(path string) ([]byte, error) {
     f, err := os.Open(path)
@@ -62,3 +72,5 @@ func ReadAll(path string) ([]byte, error) {
     return io.ReadAll(f)
 }
 ```
+
+Next: [Packages & Modules](packages.md)

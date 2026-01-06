@@ -3,6 +3,8 @@
 Arrays are fixed-size value types. Slices are dynamic views over arrays.
 
 ## Arrays
+Fixed-length sequences; use when size is known at compile time.
+
 ```go
 var a [3]int
 b := [3]int{1, 2, 3}
@@ -15,6 +17,8 @@ fmt.Println(a == b) // comparable by element
 Passing an array copies it. Use a pointer or slice when you want sharing.
 
 ## Slices
+Dynamic views over arrays with length and capacity.
+
 ```go
 s := []int{1, 2, 3}
 t := make([]int, 0, 10) // len 0, cap 10
@@ -31,6 +35,8 @@ e := []int{}  // empty but non-nil
 ```
 
 ## Slicing and Capacity
+How slicing affects length and capacity.
+
 ```go
 a := [5]int{0, 1, 2, 3, 4}
 s := a[1:4]      // [1 2 3]
@@ -39,6 +45,8 @@ t := a[1:4:4]    // full slice expression, cap limited to 3
 ```
 
 ## Pitfalls
+Common mistakes and how to avoid them.
+
 - Appending may reallocate; do not keep pointers to elements across append.
 - Slicing a huge backing array keeps it alive. Copy into a new slice if needed.
 
@@ -46,3 +54,5 @@ t := a[1:4:4]    // full slice expression, cap limited to 3
 big := make([]byte, 1<<20)
 small := append([]byte(nil), big[:10]...) // copy to release big
 ```
+
+Next: [Maps & Sets](maps_sets.md)

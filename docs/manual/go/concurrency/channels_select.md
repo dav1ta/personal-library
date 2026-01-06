@@ -3,12 +3,16 @@
 Channels synchronize goroutines and transfer data.
 
 ## Unbuffered and Buffered
+How channel buffering changes synchronization.
+
 ```go
 ch := make(chan int)      // unbuffered
 buf := make(chan int, 10) // buffered
 ```
 
 ## Send, Receive, Close
+Channel send, receive, and close semantics.
+
 ```go
 ch <- 1
 v := <-ch
@@ -20,6 +24,8 @@ for v := range ch {
 ```
 
 ## Select
+Wait on multiple channel operations.
+
 ```go
 select {
 case v := <-ch:
@@ -30,3 +36,5 @@ default:
     // non-blocking path
 }
 ```
+
+Next: [Sync + Context](sync_context.md)

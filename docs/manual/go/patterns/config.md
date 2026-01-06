@@ -3,6 +3,8 @@
 Use a clear precedence order so config is predictable.
 
 ## The 5 Layers (low -> high priority)
+Config precedence from low to high priority sources.
+
 1. Defaults in code
 2. Config file (optional)
 3. Environment variables
@@ -12,6 +14,8 @@ Use a clear precedence order so config is predictable.
 Keep it boring: deterministic, validated, and easy to debug.
 
 ## Minimal Standard-Lib Loader
+Small config loader using only the standard library.
+
 ```go
 type Config struct {
     Addr     string
@@ -50,6 +54,8 @@ func LoadConfig() (Config, error) {
 ```
 
 ## Secrets
+Handle secrets securely and avoid leaking them.
+
 - Never commit secrets to git.
 - Prefer environment variables or mounted files (Kubernetes secrets).
 - Separate secret values from non-secret config.
@@ -66,3 +72,5 @@ apiKey := strings.TrimSpace(string(secret))
 ## When You Need a Library
 If the config surface grows (multiple files, env + flags + overrides), use a config helper.
 See [Common Libraries](libraries.md) for options.
+
+Next: [Background Jobs](background_jobs.md)
