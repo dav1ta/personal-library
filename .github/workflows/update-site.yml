@@ -27,7 +27,7 @@ jobs:
         pip install -r requirements.txt
 
     - name: Build site
-      run: mkdocs build
+      run: mkdocs build --clean
 
     - name: Checkout target repo
       uses: actions/checkout@v2
@@ -35,6 +35,10 @@ jobs:
         repository: dav1ta/dav1ta.github.io
         token: ${{ secrets.PAT }} 
         path: ./tmp 
+
+    - name: Clean target repo
+      run: |
+        find ./tmp -mindepth 1 -maxdepth 1 ! -name .git ! -name CNAME ! -name .nojekyll -exec rm -rf {} +
 
     - name: Copy site content
       run: cp -r site/* ./tmp
