@@ -20,3 +20,5 @@ spec:
 - Use Deployments for most workloads instead of raw Pods.
 - Add resource requests/limits.
 - Use probes to signal readiness and liveness.
+
+Next: [ReplicaSets](replicasets.md)

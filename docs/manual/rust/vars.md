@@ -105,3 +105,5 @@ impl Point {
 - Avoid cloning by default; reach for `.clone()` only when ownership truly must be duplicated.
 - Favor iterators over indexed loops; use `into_iter` to consume, `iter` to borrow, `iter_mut` to mutably borrow.
 - In async code, avoid blocking calls (e.g., `std::thread::sleep`) inside async functions; use runtime-aware versions (e.g., `tokio::time::sleep`).
+
+Next: [Data & Generics](generators.md)

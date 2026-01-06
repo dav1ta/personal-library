@@ -65,3 +65,5 @@ Code/Prototype Ideas (optional, one‑file MVPs)
 
 Notes / Code reference
 - Our filler uses a simple round‑robin across roles once minimums are satisfied, dropping roles that are empty or at max — see `matchmaking-queue/src/matchmaking.py` inside `fill_team_by_caps`.
+
+Next: [Mini CDN Lab](../mini-cdn-lab/problems.md)

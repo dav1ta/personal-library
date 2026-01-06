@@ -75,3 +75,5 @@ Feel free to contribute to this documentation by submitting pull requests or ope
 ## Version Information
 
 This documentation is maintained for Python versions 3.8 and above. Specific version requirements are noted in each section. 
+
+Next: [Data Types](basics/data_types.md)

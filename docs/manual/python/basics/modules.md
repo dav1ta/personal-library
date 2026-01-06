@@ -191,3 +191,5 @@ print(mymodule.__path__)      # Package subdirectories
 6. Document module purpose and usage
 7. Use proper package structure
 8. Consider namespace pollution
+
+Next: [Errors](errors.md)

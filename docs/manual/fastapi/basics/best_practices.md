@@ -71,3 +71,5 @@ def get_db():
 ## Testing
 - Use `TestClient` for route tests.
 - Prefer integration tests for real DB paths.
+
+Next: [Troubleshooting](troubleshooting.md)

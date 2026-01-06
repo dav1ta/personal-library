@@ -78,3 +78,5 @@ Concise, practical guidance for large Angular apps. No fluff.
 
 ## Version Notes
 See [Versions](versions.md) for v18–v20 highlights and official links.
+
+Next: [Subjects](subjects.md)

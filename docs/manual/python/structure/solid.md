@@ -133,3 +133,5 @@ class Switchable(ABC):
 ```
 
 By adhering to these principles, developers can create more maintainable, scalable, and robust systems.
+
+Next: [Structure](structure.md)

@@ -292,3 +292,4 @@ Simulate failures (e.g., database errors, network latency) to test resilience.
 ### Mocking with Context Managers
 Simplify external dependency mocking using context managers.
 
+Next: [Decorators](../advanced/decorators.md)

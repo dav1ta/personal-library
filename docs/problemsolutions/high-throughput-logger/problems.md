@@ -49,3 +49,5 @@ To make this a true "Enterprise Platform", you are missing these 3 components:
 *   **Solution**:
     *   **ClickHouse TTL**: `ALTER TABLE logs MODIFY TTL timestamp + INTERVAL 30 DAY DELETE`.
     *   **Tiered Storage**: Move logs > 7 days old to S3 (Cheaper) before deleting.
+
+Next: [Job Queue Service](../job-queue-service/problems.md)

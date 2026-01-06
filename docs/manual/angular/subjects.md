@@ -63,3 +63,5 @@ done$.subscribe(v => console.log(v)); // prints 2
 - Keep subjects private; expose `asObservable()`.
 - Prefer plain observables or signals unless you need multicasting.
 - Avoid using subjects as global state without clear ownership.
+
+Next: [Gitlab](../setups/install.md)

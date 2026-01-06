@@ -54,3 +54,4 @@ with open("header.bin", "rb") as f:
 - On Windows, close mappings before deleting/renaming files.
 - Consider `pathlib.Path.open` and sizes from `Path.stat().st_size` for robustness.
 
+Next: [Subprocess](subprocess.md)

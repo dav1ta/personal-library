@@ -42,3 +42,5 @@ print(stack.pop())  # 2
 
 ## Resources
 - [Python data structures](https://docs.python.org/3/tutorial/datastructures.html) 
+
+Next: [Datetime](datetime.md)

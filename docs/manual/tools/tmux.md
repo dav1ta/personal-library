@@ -41,3 +41,5 @@ This note outlines keybindings and usage for a selection of TMUX plugins, assumi
 - **Open URLs using fzf**:
   - Open URL from pane: `C-a` + `u`
   - Lists URLs in the current pane using fzf, allowing you to select one to open in your default browser.
+
+Next: [Guide](nvim.md)

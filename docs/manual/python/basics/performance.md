@@ -36,3 +36,5 @@ result = [i * 2 for i in range(1000)]
 
 ## Resources
 - [Python performance tips](https://docs.python.org/3/howto/profile.html) 
+
+Next: [Type Annotations](type_annotations.md)

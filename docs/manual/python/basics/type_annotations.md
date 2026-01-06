@@ -296,3 +296,5 @@ Cross-refs to examples
 - Protocol-based design: `advanced/type_system.md:1`, `advanced/descriptors.md:1`
 - Async generator typing and streams: `async.md:1`
 - Datamodel interactions (descriptors/protocols): `classes/descriptors.md:1`, `advanced/descriptors.md:1`
+
+Next: [Virtualenv & Pip](venv_pip.md)

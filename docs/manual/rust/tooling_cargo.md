@@ -76,3 +76,5 @@ debug = true
 - Add targets: `rustup target add x86_64-unknown-linux-musl`.
 - Use `cross` for simplified cross builds when system toolchains are messy.
 - For macOS→Linux with MUSL: set `RUSTFLAGS="-C target-feature=-crt-static"` if you need dynamic linking.
+
+Next: [Testing](testing.md)

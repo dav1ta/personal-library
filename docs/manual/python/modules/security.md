@@ -77,3 +77,4 @@ Avoid disabling verification; do not set `check_hostname=False` or `verify_mode=
 - Use environment variables and secret stores; avoid committing secrets.
 - Rotate keys and enforce least privilege.
 
+Next: [SQLite](sqlite.md)

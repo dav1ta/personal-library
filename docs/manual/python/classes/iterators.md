@@ -193,3 +193,4 @@ async def record_streamer(max_rows):
         yield row
 ```
 
+Next: [Iterators (Advanced)](../advanced/iterators.md)

@@ -17,3 +17,5 @@ Doing this synchronously in the API handler is slow and brittle. If the Email se
 3.  **Decoupling**: The Main App (Producer) pushes data to an `asyncio.Queue`. It doesn't know about the publishers.
 4.  **Worker**: A background consumer reads from the Queue and calls the `FanOutPublisher`.
 5.  **Error Isolation**: If one publisher fails (e.g., Email is down), it shouldn't crash the others (DB/Search).
+
+Next: [Streaming Server Practice](../streaming-server-practice/problems.md)

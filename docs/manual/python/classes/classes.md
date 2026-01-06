@@ -1577,3 +1577,4 @@ Historically, metaclasses have been used to accomplish a variety of tasks that a
 | `i.__class__`          | Class to which the instance belongs                |
 | `i.__dict__`           | Dictionary holding instance data (if defined)      |
 
+Next: [Classes (Advanced)](../advanced/classes.md)

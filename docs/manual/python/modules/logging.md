@@ -107,3 +107,4 @@ Notes:
 - For libraries: never configure handlers by default; respect the application’s config.
 - Use `exc_info=True` to include tracebacks on exceptions.
 
+Next: [Config](config.md)

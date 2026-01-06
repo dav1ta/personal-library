@@ -180,3 +180,5 @@ Here is a sample `.gitlab-ci.yml` pipeline configuration:
      script:
        - echo "Running tests..."
 ```
+
+Next: [Overview](../kubernetes/index.md)

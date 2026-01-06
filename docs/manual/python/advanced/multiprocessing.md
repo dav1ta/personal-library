@@ -97,3 +97,4 @@ Prefer `ProcessPoolExecutor` for modern APIs and composability with `ThreadPoolE
 - Avoid holding global connections (DB, sockets) across fork; reinitialize in child.
 - Control memory growth: big args/results are pickled; consider shared memory or mmap.
 
+Next: [Overview](../modules/modules.md)

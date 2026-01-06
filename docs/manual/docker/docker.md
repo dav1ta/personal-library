@@ -36,3 +36,5 @@ docker image prune
 
 ## Compose
 See `docker-compose.md` for a minimal multi-service example.
+
+Next: [Workflows](../git/flows.md)

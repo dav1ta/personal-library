@@ -10,3 +10,5 @@ Ensure a specified number of pod replicas are running.
 kubectl get rs
 kubectl describe rs <name>
 ```
+
+Next: [Roles](roles.md)

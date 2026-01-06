@@ -141,3 +141,5 @@ for t in threads:
 - **`Barrier`**: Ensures that threads reach a certain point before any can proceed.
 
 These primitives offer various ways to handle synchronization challenges in multi-threaded programs, letting you coordinate and manage shared resources effectively.
+
+Next: [Multiprocessing](../advanced/multiprocessing.md)

@@ -206,3 +206,5 @@ class Subject:
 - [Descriptors](../advanced/descriptors.md)
 - [Iterators](../advanced/iterators.md)
 - Metaclasses 
+
+Next: [Data Model](../classes/data_model.md)

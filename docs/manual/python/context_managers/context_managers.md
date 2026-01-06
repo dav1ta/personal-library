@@ -24,3 +24,5 @@ with open('data.txt') as file:
     while (chunk := file.read(10000)):
         print(chunk, end='')
 ```
+
+Next: [Errors & ExceptionGroups](../advanced/errors_exceptiongroups.md)

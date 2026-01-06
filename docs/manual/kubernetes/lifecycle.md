@@ -22,3 +22,5 @@ terminationGracePeriodSeconds: 30
 
 ## Notes
 - Readiness gates traffic; liveness restarts containers.
+
+Next: [Maintenance](maintenance.md)

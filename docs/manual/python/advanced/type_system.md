@@ -228,3 +228,5 @@ Matrix: TypeAlias = list[list[float]]
 - [Decorators](../advanced/decorators.md)
 - Metaclasses
 - Performance Optimization 
+
+Next: [Memory](memory.md)

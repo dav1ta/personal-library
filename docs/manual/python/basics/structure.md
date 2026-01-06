@@ -249,3 +249,5 @@ except ValueError as e:
 - Functions
 - Error Handling
 - Style Guide 
+
+Next: [Collections](collections.md)

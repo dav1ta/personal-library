@@ -171,3 +171,5 @@ class TemporaryDirectory:
 - Error Handling
 - Resource Management
 - Performance Optimization 
+
+Next: [Context Managers (Guide)](../context_managers/context_managers.md)

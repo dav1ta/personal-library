@@ -155,3 +155,5 @@ class Point:
 - [Collections Module](collections.md)
 - Type Annotations
 - [Performance Optimization](performance.md) 
+
+Next: [Objects](objects.md)

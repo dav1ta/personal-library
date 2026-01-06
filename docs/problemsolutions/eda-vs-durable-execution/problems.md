@@ -28,3 +28,4 @@ Fair Comparison Scenario
 - Both flows perform: validate → record to DB → wait (timer) → clear.
 - Failures injected: publish flake, DB hiccup, crash after DB write.
 
+Next: [gRPC Protobuf Practice](../grpc-protobuf-practice/problems.md)

@@ -80,3 +80,4 @@ print(conn.execute("SELECT py_upper(name) FROM users").fetchone()[0])
 - Keep one connection per thread; enable `check_same_thread=False` only if you manage access.
 - Use `Row` factory for readable code and JSON serialization.
 
+Next: [DB Patterns](db_patterns.md)

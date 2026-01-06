@@ -249,3 +249,5 @@ This means:
 - Architectural and schema changes are often required to fix tail latency, not just hardware upgrades.
 
 These principles apply to many large-scale storage-backed systems, especially those built on distributed databases like HBase, Bigtable, or Cassandra.
+
+Next: [Shopify Black Friday Scale](shopify-black-friday-scale.md)

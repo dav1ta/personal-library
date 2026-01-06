@@ -22,3 +22,5 @@
 - Examples target stable Rust as of 2025; prefer the latest stable toolchain via `rustup update`.
 - Async examples use `tokio` 1.x; adjust imports if using another runtime.
 - Macros and FFI sections assume the 2021 edition unless stated otherwise.
+
+Next: [Fundamentals](vars.md)

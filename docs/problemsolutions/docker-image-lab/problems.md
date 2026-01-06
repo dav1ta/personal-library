@@ -33,3 +33,4 @@
 
 **Solution Logic:** Restructure the project so that the Docker build context includes only what is required to build and run the app, excluding logs, docs, and local tooling via directory layout and `.dockerignore`. This reduces context size, speeds up context transfer to the daemon/remote builder, and avoids spurious cache invalidations caused by files that should not affect the image. Architecturally, you treat the build context as an API boundary: small, explicit, and stable.
 
+Next: [EDA vs Durable Execution](../eda-vs-durable-execution/problems.md)

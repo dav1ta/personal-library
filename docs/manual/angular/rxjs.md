@@ -86,3 +86,5 @@ save$.pipe(
 - Nested subscribe.
 - `shareReplay` without `refCount` for long-lived streams.
 - Swallowing errors deep in the chain without surfacing or logging.
+
+Next: [Tips](tips.md)

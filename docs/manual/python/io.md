@@ -228,3 +228,5 @@ except UnicodeDecodeError:
 
 - `io` ABCs: `io.IOBase`, `io.RawIOBase`, `io.BufferedIOBase`, `io.TextIOBase` for shared API surface.
 - Standard library friends: `gzip`, `bz2`, `lzma`, `zipfile`, `tarfile` — all play well with `io` wrappers.
+
+Next: [Structure](basics/structure.md)

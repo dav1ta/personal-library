@@ -174,3 +174,4 @@ Calling `hash(t)` on a tuple is a quick way to assert that its value is fixed. A
 **Decode vs Encode**
 Imagine `str` is human-readable bytes; don't. Bytes need decoding; string encoding.
 
+Next: [Data Model (Advanced)](../advanced/data_model.md)

@@ -269,3 +269,5 @@ Implications:
 - Roll back easily if regressions occur.
 
 These patterns apply to any large-scale, real-time system with many long-lived connections, such as chat platforms, game backends, or collaboration tools.
+
+Next: [Figma CRDT Multiplayer](figma-crdt-multiplayer.md)

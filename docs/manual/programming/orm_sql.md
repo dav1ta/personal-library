@@ -635,3 +635,5 @@ SET field1 = 'value1';
 ---
 
 These are some deeper techniques and features that can be utilized in ORMs and SQL to optimize, enhance, and leverage powerful database features. Remember that the most suitable technique always depends on the specific problem you're solving, the database you're using, and the scale at which you operate.
+
+Next: [Graph](../graph/graph.md)

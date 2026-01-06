@@ -157,3 +157,4 @@ If mixing with non-dataclass bases, use `init=False` and define custom `__init__
 - Keep dataclasses simple; move logic to methods or helpers to avoid turning them into heavy models.
 - For JSON, pair with a custom `default` function (see `modules/serialization.md`).
 
+Next: [itertools & functools](itertools_functools.md)

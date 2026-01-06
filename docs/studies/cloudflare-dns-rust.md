@@ -279,3 +279,5 @@ Applied elsewhere, this pattern suggests:
 - Profiling hot paths in your service.
 - Isolating them into well-defined components.
 - Rewriting only those parts in a lower-level, more predictable language while keeping the rest of the system intact.
+
+Next: [Discord Gateway Scale](discord-gateway-scale.md)

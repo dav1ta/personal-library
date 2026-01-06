@@ -19,3 +19,5 @@ tolerations:
     value: "gpu"
     effect: "NoSchedule"
 ```
+
+Next: [Code Review](../programming/code_review.md)

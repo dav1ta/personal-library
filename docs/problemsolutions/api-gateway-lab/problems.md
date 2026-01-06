@@ -42,3 +42,4 @@ Detect when multiple in-flight requests target the same cacheable key. Only send
 - Decide which routes are cacheable and how to key them for request collapsing and caching.
 - Plan observability: a `/metrics` or `/status` endpoint showing breaker state, rate-limit stats, and cache hit rate.
 
+Next: [Docker Image Lab](../docker-image-lab/problems.md)

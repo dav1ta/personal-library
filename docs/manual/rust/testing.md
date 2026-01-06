@@ -95,3 +95,5 @@ fn render_card() {
 - Run `cargo test`, `cargo clippy --tests`, and `cargo fmt` in CI.
 - Keep tests hermetic: avoid network/filesystem unless explicitly scoped; use tempdirs with `tempfile`.
 - Name tests for behavior, not implementation details.
+
+Next: [CLI / Web / DB](cli_web_db.md)

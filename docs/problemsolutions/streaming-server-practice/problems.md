@@ -48,3 +48,5 @@ We implement a `StreamHub`. The RTMP Ingest connection is a **Publisher**. It pu
 **Q3:** If 1000 viewers fetch segments directly from one box, what saturates first: CPU, disk, or NIC?  
 **Your answer:** Probably the NIC.  
 **Takeaway:** Roughly, `viewers * bitrate_per_viewer <= NIC_capacity`. With 1000 viewers at 4 Mbps, you need ~4 Gbps; a single 1 Gbps NIC will saturate, so you need either multiple edge nodes or a CDN in front of origin.
+
+Next: [Prompt](../prompt.md)

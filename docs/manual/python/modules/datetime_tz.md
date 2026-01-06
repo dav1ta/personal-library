@@ -65,3 +65,4 @@ rounded = start.replace(second=0, microsecond=0)
 - Prefer `zoneinfo` over third-party when possible.
 - Beware DST gaps and folds; see `datetime.fold` for ambiguous times.
 
+Next: [Code Design](../advanced/code_design.md)

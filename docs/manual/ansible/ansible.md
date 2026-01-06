@@ -138,3 +138,4 @@ Configure and manage network devices across data centers.
 
 These examples and features showcase the versatility and power of Ansible in real-world scenarios, from simple configuration management to sophisticated automation workflows across IT infrastructure.
 
+Next: [Tmux](../tools/tmux.md)

@@ -46,3 +46,5 @@ slow_function()
 
 ## Resources
 - [Python decorators](https://realpython.com/primer-on-python-decorators/) 
+
+Next: [Performance](performance.md)

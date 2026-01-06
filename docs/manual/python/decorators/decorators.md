@@ -189,3 +189,5 @@ class Customer(BaseResolverMixin):
     address: str
 ```
 > Note: See `advanced/decorators.md` for the canonical, in-depth guide to decorators. This page contains snippet-style examples.
+
+Next: [Context Managers](../advanced/context_managers.md)

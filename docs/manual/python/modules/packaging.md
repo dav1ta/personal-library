@@ -60,3 +60,4 @@ pip install -e .
 - Include `py.typed` for typed libraries; ship type info.
 - Add `LICENSE`, classifiers, and `long_description` metadata for good packaging hygiene.
 
+Next: [Datetime & TZ](datetime_tz.md)

@@ -395,3 +395,5 @@ Below are refined tables for several Python standard library modules, summarizin
 | `asyncio.open_connection(host, port)` | Opens a network connection, returning reader and writer streams.      |
 
 *Note: These tables present key aspects and methods of each module. Each module offers many more features and functions. For comprehensive details, consult the official Python documentation.*
+
+Next: [Enum](enum.md)

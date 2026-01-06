@@ -273,3 +273,5 @@ async def record_streamer(max_rows):
 - Concurrency Patterns
 - Performance Optimization
 - Debugging 
+
+Next: [Asyncio (Guide)](../async.md)

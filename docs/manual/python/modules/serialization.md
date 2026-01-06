@@ -82,3 +82,4 @@ obj2 = pickle.loads(blob)
 
 Prefer JSON/TOML/CSV for interoperability; only use pickle for trusted, Python-only data.
 
+Next: [mmap](mmap.md)

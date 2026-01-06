@@ -54,3 +54,5 @@ When adding 'Wed' to the set, Python computes the hash -5145319347887138165 and 
 Adding the next element, 'Thu', is boring: there’s no collision, and it lands in its natural bucket, at index 7. Placing 'Fri' is more interesting. Its hash, 7021641685991143771 implies index 3, which is taken by 'Mon'. Probing the next bucket—4— Python finds the hash for 'Wed' stored there. The hash codes don’t match, so this is another index collision. Python probes the next bucket. It’s empty, so 'Fri' ends up at index 5. The end state of the hash table is shown in Figure 3-8.
 
 ahsh table for the set {'Mon', 'Tue', 'Wed', 'Thu', 'Fri'}. It is now 62.5% full—close to the ⅔ threshold.
+
+Next: [List & Tuple](list_tuple.md)

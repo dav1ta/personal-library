@@ -92,3 +92,4 @@ role = Role(data["role"])  # value → enum
 - Use `IntEnum` only when APIs require integers.
 - For flags, prefer `Flag` over manual bit masks and test with membership (`in`).
 
+Next: [Dataclasses](dataclasses.md)

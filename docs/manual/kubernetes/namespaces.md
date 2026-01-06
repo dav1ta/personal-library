@@ -11,3 +11,5 @@ kubectl config set-context --current --namespace=staging
 ## Tips
 - Use namespaces for env separation.
 - Enforce limits with ResourceQuotas and LimitRanges.
+
+Next: [Network](network.md)

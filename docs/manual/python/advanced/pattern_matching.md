@@ -82,3 +82,4 @@ def eval(ast):
 - Be explicit with mapping keys to avoid accidental matches.
 - Keep guards side-effect free and fast; heavy checks belong after the match.
 
+Next: [Type System](type_system.md)

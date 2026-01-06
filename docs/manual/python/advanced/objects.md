@@ -257,3 +257,5 @@ class NumericObject:
 - [Classes](classes.md)
 - Memory Management
 - Protocols 
+
+Next: [From Talks](../talks/talks.md)

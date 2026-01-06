@@ -2482,3 +2482,5 @@ Mastering the OWL framework within Odoo empowers developers to build modern, eff
 The integration of the OWL framework into Odoo represents a significant advancement in building dynamic and responsive business applications. By embracing OWL's modern web development paradigms and following the best practices outlined in this guide, you can develop Odoo modules that not only meet current business needs but also adapt to future challenges and innovations.
 
 Embrace the power of OWL to elevate your Odoo development experience, delivering exceptional user experiences and robust functionalities that drive business success.
+
+Next: [Ansible](../ansible/ansible.md)

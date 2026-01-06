@@ -90,3 +90,4 @@ with socket.create_connection(("example.com", 443)) as sock:
 - Prefer `socket.create_connection` for clients; it handles DNS and timeouts.
 - Wrap sockets with `makefile` + `TextIOWrapper` for line-based protocols.
 
+Next: [HTTP Clients](http_clients.md)

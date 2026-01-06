@@ -1679,3 +1679,5 @@ Don’t name your module `json.py`, `random.py`, etc., or imports will resolve t
 
 ### 262. Relative imports can surprise
 Prefer absolute imports inside packages to avoid ambiguity and circular import headaches.
+
+Next: [Overview](../go/index.md)

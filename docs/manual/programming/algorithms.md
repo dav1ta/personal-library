@@ -938,3 +938,5 @@ def search(txt, pat):
         else:
             s += max(1, j-badChar[ord(txt[s+j])])
 ```
+
+Next: [AI](ai.md)

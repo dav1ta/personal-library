@@ -34,3 +34,5 @@ psql -U postgres
 ## Next Steps
 - [Configuration](configuration.md)
 - [Performance](../advanced/performance.md)
+
+Next: [Configuration](configuration.md)

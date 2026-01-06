@@ -87,3 +87,4 @@ class Method:
 Since this is a very elegant solution, it's worth exploring it to keep it in mind as a Pythonic approach when defining our own objects. For instance, if we were to define our own callable, it would be a good idea to also make it a descriptor so that we can use it in classes as class attributes as well.
 ```
 
+Next: [Descriptors (Advanced)](../advanced/descriptors.md)

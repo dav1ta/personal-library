@@ -228,3 +228,5 @@
 | **Pecs/Shoulders**     | Doorway Stretch                             | 🔥🔥🔥🔥 (Releases forward-rolled shoulders) |
 |                        | Wall Angels / Y-T-W Raises                  | 🔥🔥🔥🔥 (Postural scapular control)      |
 | **Hamstrings**         | Seated or Standing Hamstring Stretch        | 🔥🔥🔥 (Supports posterior tilt)         |
+
+Next: [All](../../studies/all.md)

@@ -105,3 +105,4 @@ class Decorate(ast.NodeTransformer):
 
 Prepend `TRACE_DECORATOR` to the module body before compile; or insert into the module dict before `exec`.
 
+Next: [Pattern Matching](pattern_matching.md)

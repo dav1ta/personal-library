@@ -162,3 +162,5 @@ wref = weakref.ref(a_list)
 - Memory Management
 - Garbage Collection
 - [Performance Optimization](performance.md) 
+
+Next: [Functions](functions.md)

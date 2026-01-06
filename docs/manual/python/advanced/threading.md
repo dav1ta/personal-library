@@ -270,3 +270,5 @@ class Singleton:
 - Concurrency Patterns
 - Performance Optimization
 - Debugging 
+
+Next: [Threading (Guide)](../threading/threading.md)

@@ -30,3 +30,5 @@ Rich Error Model (`google.rpc.Status`)
 
 **Solution Logic:** 
 We will avoid mapping everything to simple HTTP-like status codes. Instead, we will use the `google.rpc.Status` model to attach strongly-typed error details (like a `QuotaFailure` or custom `TransactionError` message) to the gRPC error response, allowing the client to programmatically handle specific failure scenarios.
+
+Next: [High Throughput Logger](../high-throughput-logger/problems.md)

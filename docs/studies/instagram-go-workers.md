@@ -265,3 +265,5 @@ Practically, this means:
 - Move specific, well-defined job types first to validate the new architecture.
 
 These patterns apply broadly to large-scale background processing systems handling media, data pipelines, or any workload with bursts and heavy CPU/IO requirements.
+
+Next: [Linkedin Feed Ranking Latency](linkedin-feed-ranking-latency.md)

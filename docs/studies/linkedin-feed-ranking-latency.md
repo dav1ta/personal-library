@@ -234,3 +234,5 @@ Practically, this implies:
 - Reducing redundant traffic yields both performance and cost benefits.
 
 These techniques generalize to any large-scale, personalized feed or search system with many backend dependencies.
+
+Next: [Netflix GC Pauses](netflix-gc-pauses.md)

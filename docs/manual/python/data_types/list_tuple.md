@@ -7,3 +7,5 @@
             for item2 in iterable2 if condition2
  ]
 ```
+
+Next: [Object](object.md)

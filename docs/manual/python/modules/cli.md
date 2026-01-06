@@ -72,3 +72,4 @@ args = p.parse_args([])
 - Prefer clear `help=` strings and sensible defaults.
 - Consider `click`/`typer` for ergonomics; keep `argparse` for zero-deps.
 
+Next: [Logging](logging.md)

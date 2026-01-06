@@ -78,3 +78,5 @@ let _ = tx.send(());
 - Use `#[tokio::test(flavor = "multi_thread", worker_threads = 2)]` when tests spawn tasks.
 - Avoid real sleeps; use time control (`tokio::time::pause`, `advance`) to test timers deterministically.
 - For stream tests, collect limited items and assert ordering and completion behavior.
+
+Next: [Nutrition](../other/nutr.md)

@@ -52,3 +52,5 @@ Use this as a practical checklist when designing services.
 - Cache in front of data store
 - Queue + worker for background jobs
 - Metrics/logs everywhere
+
+Next: [Problems](prob.md)

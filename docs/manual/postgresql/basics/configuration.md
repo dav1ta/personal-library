@@ -39,3 +39,5 @@ autovacuum_analyze_scale_factor = 0.1
 
 ## Next Steps
 - [Performance](../advanced/performance.md)
+
+Next: [Performance](../advanced/performance.md)

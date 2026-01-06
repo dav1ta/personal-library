@@ -100,3 +100,5 @@ let sum: i32 = odds.iter().copied().sum();
   - `anyhow` for application-level errors where context matters more than exact types.
 - Enrich context: `fs::read_to_string(path).with_context(|| format!("reading {}", path.display()))?;`.
 - Convert fallible initialization into builders that return `Result<Self>` to keep constructors infallible where possible.
+
+Next: [Async & Concurrency](object.md)

@@ -62,3 +62,5 @@ async def current_user(token: str = Depends(oauth2)):
 - Always use HTTPS.
 - Use strong secrets and rotate keys.
 - Enforce auth scopes/roles in dependencies.
+
+Next: [Overview](../../postgresql/index.md)

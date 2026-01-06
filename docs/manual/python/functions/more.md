@@ -147,3 +147,5 @@ Each tool's `_arun` works as expected, calling its own original method.
   Use a default argument (`original_func=original_arun`) to capture the current value for each iteration.
 
 **Tip:** This pattern is crucial to remember for dynamic method patching, decorators in loops, and any place where you use closures with loop variables.
+
+Next: [Classes](../classes/classes.md)

@@ -50,3 +50,5 @@ with transaction.atomic():
 ## Debugging
 - Use Django Debug Toolbar in dev.
 - Log slow queries in production.
+
+Next: [OWL](../odoo/owl.md)

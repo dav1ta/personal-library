@@ -166,3 +166,5 @@ print(c.total_seconds())  # 210600.0
 - [Data Structures](data_structures.md)
 - [Collections Module](collections.md)
 - [Date and Time](datetime.md) 
+
+Next: [Lists & Tuples](lists_tuples.md)

@@ -60,3 +60,4 @@ if os.path.exists(filename):
         # Code for file processing
 ```
 
+Next: [Design Patterns](dessign_patterns.md)

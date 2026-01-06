@@ -45,3 +45,5 @@ print(count)  # Counter({'apple': 2, 'banana': 1})
 
 ## Resources
 - [Python collections docs](https://docs.python.org/3/library/collections.html) 
+
+Next: [Data Structures](data_structures.md)

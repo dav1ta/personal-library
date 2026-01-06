@@ -248,3 +248,5 @@ async def record_streamer(max_rows):
 - [Context Managers](../advanced/context_managers.md)
 - [Async Programming](../advanced/async.md)
 - Performance Optimization 
+
+Next: [Async Programming](async.md)

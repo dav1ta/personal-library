@@ -31,3 +31,5 @@ Each item includes the usual go-to patterns.
 ## Architecture Choices
 - **Monolith vs microservices:** start modular; split only when needed.
 - **Sync vs async:** use async for slow or retryable work.
+
+Next: [Book](book.md)

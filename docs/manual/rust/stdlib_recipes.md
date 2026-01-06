@@ -84,3 +84,5 @@ fn load(path: &Path) -> anyhow::Result<String> {
 - Always surface context on I/O errors.
 - Benchmark with `Instant`, not `SystemTime`.
 - Reach for crates (`walkdir`, `rayon`) when std lacks ergonomics; keep the unsafe boundary in the crate, not your app.
+
+Next: [Cargo & Tooling](tooling_cargo.md)

@@ -45,3 +45,5 @@ def delete_item(item_id: int):
 ## Notes
 - Use Pydantic models for validation.
 - Use dependency-injected DB sessions for real storage.
+
+Next: [Dependencies](dependencies.md)

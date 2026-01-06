@@ -89,3 +89,4 @@ print(s.st_size, s.st_mtime)
 - Use `write_text`/`read_text` with explicit `encoding`.
 - Use `replace()` for atomic move when staying on the same filesystem.
 
+Next: [Serialization](serialization.md)

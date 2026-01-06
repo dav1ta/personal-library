@@ -14,3 +14,5 @@ Concise FastAPI notes: basics, CRUD, dependencies, best practices, troubleshooti
 ## Version Notes
 - Keep FastAPI, Starlette, and Pydantic on supported, current versions.
 - Check official release notes before upgrading production apps.
+
+Next: [Getting Started](basics/getting_started.md)

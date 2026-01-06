@@ -265,3 +265,5 @@ In practice, this means:
 - This is especially valuable in collaborative tools where connectivity is not always perfect.
 
 These patterns generalize to other real-time collaborative apps: code editors, whiteboards, note-taking tools, and any system where many users mutate shared structured data concurrently.
+
+Next: [Instagram Go Workers](instagram-go-workers.md)

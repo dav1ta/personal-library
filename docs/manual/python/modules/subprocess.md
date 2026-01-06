@@ -83,3 +83,4 @@ except sp.CalledProcessError as e:
 - Use explicit timeouts for external commands.
 - Limit environment exposure via `env={...}` and `cwd=...` when appropriate.
 
+Next: [CLI](cli.md)

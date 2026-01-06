@@ -25,3 +25,5 @@ Short, high-signal highlights with links to official release posts.
 - Angular v20: https://blog.angular.dev/announcing-angular-v20-b5c9c06cf301
 - Angular v19: https://blog.angular.dev/meet-angular-v19-7b29dfd05b84
 - Angular v18: https://blog.angular.dev/angular-v18-is-now-available-e79d5ac0affe
+
+Next: [RxJS](rxjs.md)

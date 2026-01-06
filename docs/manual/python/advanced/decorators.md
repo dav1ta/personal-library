@@ -184,3 +184,5 @@ class Customer:
 5. Document decorator behavior and requirements
 6. Handle both synchronous and asynchronous functions
 7. Use type hints for better code clarity
+
+Next: [Decorators (Guide)](../decorators/decorators.md)

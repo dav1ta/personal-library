@@ -47,3 +47,4 @@ masked = re.sub(r"(?<=^|\s)\d{16}(?=\s|$)", "<CARD>", text)
 - Use non-greedy `+?`/`*?` when appropriate.
 - For very large inputs, consider `regex` third-party module for advanced features.
 
+Next: [IO](io.md)

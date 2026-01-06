@@ -84,3 +84,4 @@ Use jitter to prevent thundering herds; combine with idempotency keys on POSTs.
 - Validate SSL/TLS and pin CA bundles where appropriate.
 - For large uploads/downloads, stream in chunks and propagate backpressure.
 
+Next: [Security](security.md)

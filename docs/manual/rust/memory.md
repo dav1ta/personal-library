@@ -88,3 +88,5 @@ serde = ["serde/derive"]
 - Prefer additive, non-breaking features; avoid mutually exclusive flags unless documented.
 - Workspaces reduce duplication of dependencies and share lockfiles; centralize common tooling (lint, fmt) at the root.
 - Versioning: follow semver; keep `authors`/`repository` metadata; publish with `cargo publish --dry-run` before releasing.
+
+Next: [Stdlib Recipes](stdlib_recipes.md)

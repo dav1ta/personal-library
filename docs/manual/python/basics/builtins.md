@@ -261,3 +261,5 @@ t.index(2)
 - Type Annotations
 - [Collections Module](collections.md)
 - [Performance Optimization](performance.md) 
+
+Next: [IO](io.md)

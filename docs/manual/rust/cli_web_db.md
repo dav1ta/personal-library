@@ -130,3 +130,5 @@ async fn serve() {
 }
 ```
 - Export to observability backends with `tracing-opentelemetry` if needed.
+
+Next: [Libraries](libraries.md)

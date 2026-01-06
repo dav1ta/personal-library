@@ -308,5 +308,4 @@ for x in chain(a, b):
     print(x)
 ```
 
-
-
+Next: [Dict & Set](dic_set.md)

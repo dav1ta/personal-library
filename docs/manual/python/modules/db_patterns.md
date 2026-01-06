@@ -52,3 +52,4 @@ Keep transactions small; avoid long-running holds.
 - Use in-memory sqlite or test containers for isolated tests.
 - Seed fixtures; wrap tests in transactions truncated between tests.
 
+Next: [Packaging](packaging.md)

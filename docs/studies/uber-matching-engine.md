@@ -306,3 +306,5 @@ Applied to other systems, these lessons suggest:
 - Identify your true hot path.
 - Collapse it into a single, well-optimized service using efficient serialization and in-memory data structures.
 - Feed it with streams, keep data local, and tune for tail latency rather than averages.
+
+Next: [Uber](uber.md)

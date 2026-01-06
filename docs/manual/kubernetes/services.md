@@ -21,3 +21,5 @@ spec:
     - port: 80
       targetPort: 8080
 ```
+
+Next: [Scheduler](scheduler.md)

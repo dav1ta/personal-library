@@ -121,3 +121,5 @@ Other quick pointers (already implemented)
 - Backoff + Jitter (non‑blocking): see `process_job()` computing `delay` and `await delayed_requeue(item, delay)`.
 - DLQ (dead letter): see global `dlq` list, `/dlq` and `/dlq/requeue` endpoints.
 - Rate limiting: global token bucket `rl_consume()` checked in `/enqueue`.
+
+Next: [Matchmaking Queue](../matchmaking-queue/problems.md)

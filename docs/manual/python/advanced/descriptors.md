@@ -174,3 +174,5 @@ class Method:
 - Properties
 - Metaclasses
 - [Class Decorators](../advanced/decorators.md) 
+
+Next: [Iterators](../classes/iterators.md)

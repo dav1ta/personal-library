@@ -31,3 +31,5 @@ roleRef:
 
 ## Notes
 - Use `ClusterRole` for cluster-wide permissions.
+
+Next: [Security](security.md)

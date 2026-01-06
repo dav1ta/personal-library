@@ -92,3 +92,5 @@ Trunk-Based Development is a version control strategy where developers collabora
 3. Regularly push the trunk changes to the central repository.
 
 In Trunk-Based Development, the focus is on keeping the branches short-lived to encourage continuous integration and minimize merge conflicts.
+
+Next: [Versions](../angular/versions.md)

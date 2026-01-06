@@ -47,3 +47,5 @@ inc() {
 - Avoid re-creating objects in templates (e.g., `{}` or `[]` per change detection).
 - Lazy load feature areas and split routes.
 - Use `defer` / deferrable views for expensive UI blocks.
+
+Next: [General](expert.md)

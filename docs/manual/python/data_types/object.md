@@ -37,3 +37,5 @@ a_list can be the target of a weak reference
 wref_to_a_list = weakref.ref(a_list)
 
 I was surprised to learn that, for a tuple t, t[:] does not make a copy, but returns a reference to the same object
+
+Next: [Overview](../functions/index.md)

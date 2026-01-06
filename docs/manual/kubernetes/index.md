@@ -17,3 +17,5 @@ Concise notes on core concepts and operations.
 - [Monitoring](monitoring.md)
 - [Backup](backup.md)
 - [Maintenance](maintenance.md)
+
+Next: [Architecture](architecture.md)

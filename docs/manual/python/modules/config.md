@@ -109,3 +109,4 @@ def load_config(argv=None):
 - Prefer TOML (`pyproject` style) for richer configs; see `modules/serialization.md` for reading TOML with `tomllib`.
 - Document precedence and defaults in `--help` and README.
 
+Next: [Networking](networking.md)

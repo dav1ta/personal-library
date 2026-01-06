@@ -10,3 +10,5 @@ Practical notes on installation, config, and performance.
 ## Version Notes
 - Use a supported PostgreSQL major version.
 - Check official release notes before upgrading production clusters.
+
+Next: [Installation](basics/installation.md)

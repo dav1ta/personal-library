@@ -17,3 +17,5 @@ kubectl top nodes
 kubectl top pods -A
 kubectl get events -A --sort-by=.lastTimestamp
 ```
+
+Next: [Namespaces](namespaces.md)

@@ -49,3 +49,5 @@ Concise list of commonly used crates by category. Prefer the standard library fi
 ## Notes
 - Pick one crate per category to keep the dependency graph simple.
 - Check MSRV and feature flags before adopting a crate.
+
+Next: [Async Patterns](async_patterns.md)

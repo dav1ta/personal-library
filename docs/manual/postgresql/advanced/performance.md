@@ -37,3 +37,5 @@ Enable `pg_stat_statements` and log slow queries.
 
 ## Next Steps
 - [Configuration](../basics/configuration.md)
+
+Next: [Performance Tricks](../tricks.md)

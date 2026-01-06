@@ -1059,3 +1059,5 @@ A concurrency model where independent “actors” communicate via message passi
 
 **10. How do you implement an LRU (Least Recently Used) cache?**  
 Use a combination of a hash map for fast lookups and a doubly linked list to track recency. On access, move item to front; on insertion, remove least recently used from tail if capacity exceeded.
+
+Next: [Interview](interview.md)

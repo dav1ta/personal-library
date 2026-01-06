@@ -96,3 +96,4 @@ class Service:
 - Prefer `singledispatch` for open-closed polymorphism without class hierarchies.
 - `cached_property` is ideal for expensive, read-mostly attributes.
 
+Next: [Regex](regex.md)

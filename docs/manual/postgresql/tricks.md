@@ -33,3 +33,5 @@ CREATE INDEX idx_orders_open ON orders(created_at) WHERE status = 'open';
 -- JSONB index
 CREATE INDEX idx_meta ON events USING gin (meta);
 ```
+
+Next: [Expert](postgres.md)

@@ -260,3 +260,5 @@ def read_file(filename):
 - Design Patterns
 - Testing
 - Error Handling 
+
+Next: [SOLID Principles](solid.md)

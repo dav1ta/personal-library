@@ -673,3 +673,5 @@ The system must behave predictably during spikes.
 8.6 Use a language with predictable performance
 
 Go, Rust, C++ outperform Python/Java in tight latency SLAs.
+
+Next: [API Gateway Lab](../problemsolutions/api-gateway-lab/problems.md)

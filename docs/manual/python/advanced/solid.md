@@ -268,3 +268,5 @@ class Button:
 - [Code Design](code_design.md)
 - Testing
 - Refactoring 
+
+Next: [Best Practices](best_practices.md)

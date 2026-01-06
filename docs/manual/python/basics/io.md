@@ -195,3 +195,5 @@ if __name__ == '__main__':
 6. Handle errors gracefully
 7. Consider performance implications
 8. Follow platform conventions
+
+Next: [IO Guide](../io.md)

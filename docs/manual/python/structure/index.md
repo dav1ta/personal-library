@@ -94,3 +94,4 @@ d = { 'x': 1, 'y': 2, 'z': 3 }
 result = func(**d)  # Pass a mapping as keyword arguments
 ```
 
+Next: [Code Design](code_design.md)

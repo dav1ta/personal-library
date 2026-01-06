@@ -36,3 +36,5 @@ app.add_middleware(
 ## Debugging
 - Use structured logging.
 - Run with `uvicorn --reload` in dev only.
+
+Next: [CRUD Patterns](../advanced/crud_patterns.md)

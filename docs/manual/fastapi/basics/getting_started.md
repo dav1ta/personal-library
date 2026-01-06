@@ -33,3 +33,5 @@ uvicorn main:app --reload
 - [CRUD Operations](crud_operations.md)
 - [Dependencies](dependencies.md)
 - [Best Practices](best_practices.md)
+
+Next: [CRUD Operations](crud_operations.md)

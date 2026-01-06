@@ -956,3 +956,5 @@ def resource():
     yield obj     # test runs here
     release(obj)  # teardown always runs
 ```
+
+Next: [Async Patterns](advanced/async_patterns.md)

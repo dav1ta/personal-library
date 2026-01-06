@@ -107,3 +107,4 @@ async def serve():
 
 Manage multiple async resources robustly; ensures LIFO cleanup.
 
+Next: [Custom Awaitables](custom_awaitables.md)

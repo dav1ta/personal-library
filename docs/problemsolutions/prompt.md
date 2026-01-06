@@ -33,3 +33,4 @@ When I tell you to proceed to coding, follow these rules:
 
     Comments: Comment strictly on why a specific design pattern was chosen.
 
+Next: [Home](../manual/index.md)

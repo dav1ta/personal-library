@@ -42,3 +42,4 @@ Each edge tracks origin health. If origin fetches repeatedly time out or fail, a
 - Define failure behavior when origin is slow or down: breaker thresholds, duration to serve stale content, when to give up.
 - Plan metrics: cache hit ratio, origin QPS, per-edge load, and breaker state visibility.
 
+Next: [Postgres Lab](../postgres-lab/problems.md)

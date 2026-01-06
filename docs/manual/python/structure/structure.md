@@ -1016,3 +1016,5 @@ Here are some useful function introspection attributes:
 - `f.__globals__`: Dictionary of global namespace
 - `f.__closure__`: Closure variables
 - `f.__code__`: Code object
+
+Next: [Testing](../advanced/testing.md)

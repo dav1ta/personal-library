@@ -268,3 +268,5 @@ Implications:
 - Implement controls and flags to shed non-essential load when needed.
 
 These patterns are valuable for any multi-tenant SaaS platform facing periodic extreme spikes in traffic.
+
+Next: [Twitch Chat Scale](twitch-chat-scale.md)

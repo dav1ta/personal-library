@@ -324,3 +324,5 @@ How to get newer PostgreSQL quickly
       cur.execute("select sku from items where sku='A1'")
       print(cur.fetchall())
   ```
+
+Next: [Python Fanout Publisher](../python-fanout-publisher/problems.md)

@@ -53,3 +53,4 @@ Design tips:
 - Group errors at boundaries and report with structure; don’t flatten into strings.
 - Combine with logging to emit one summary with counts per type.
 
+Next: [Import Hooks & AST](import_hooks_ast.md)

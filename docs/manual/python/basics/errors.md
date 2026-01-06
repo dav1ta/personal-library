@@ -115,3 +115,4 @@ def expect(cond: bool, msg: str = ""):
 
 Use `AssertionError` for internal invariants only; surface user-visible errors with explicit exception types.
 
+Next: [Builtins](builtins.md)

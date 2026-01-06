@@ -70,3 +70,5 @@ q = q.order_by(Model.created_at.desc())
 ## Notes
 - Prefer transactions for multi-step writes: `async with db.begin(): ...`
 - Avoid N+1 queries; use `selectinload` / `joinedload` where needed.
+
+Next: [JWT](../security/jwt.md)

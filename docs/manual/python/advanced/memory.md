@@ -135,3 +135,4 @@ Measure before and after; benefits are workload dependent.
 
 `sys.getsizeof(obj)` returns only the immediate object’s size, not children. For deep sizes, traverse containers or use specialized profilers.
 
+Next: [Debug & Performance](debug_perf.md)

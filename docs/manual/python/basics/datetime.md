@@ -42,3 +42,5 @@ tomorrow = now + timedelta(days=1)
 
 ## Resources
 - [datetime docs](https://docs.python.org/3/library/datetime.html) 
+
+Next: [Decorators](decorators.md)

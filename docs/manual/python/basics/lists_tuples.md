@@ -142,3 +142,5 @@ repeated = (1, 2) * 3
 - Iterators and Generators
 - [Collections Module](collections.md)
 - [Performance Optimization](performance.md) 
+
+Next: [Dictionaries & Sets](dictionaries_sets.md)

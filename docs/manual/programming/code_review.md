@@ -48,3 +48,5 @@ Documentation
     Is the use and function of API functions documented?
     Are data structures/typedefs explained?
     Is there any incomplete code, e.g., code marked TODO, FIXME, or XXX?
+
+Next: [Algorithms](algorithms.md)

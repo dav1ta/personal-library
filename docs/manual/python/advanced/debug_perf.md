@@ -73,3 +73,4 @@ print(f"took {perf_counter()-t0:.3f}s")
 - Prefer sampling profilers for production; use `cProfile` for local deep dives.
 - Beware I/O in CPU profiles; isolate hot loops and measure in tight scopes.
 
+Next: [Objects](objects.md)

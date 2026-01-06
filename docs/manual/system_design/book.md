@@ -34,3 +34,5 @@ A short outline of key topics to study or reference.
 3. Data model and scaling plan.
 4. Bottlenecks and failure modes.
 5. Trade-offs and next steps.
+
+Next: [Tips](../django/django.md)

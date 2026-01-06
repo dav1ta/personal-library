@@ -2373,3 +2373,5 @@ print("Task Scheduling Order:", topological_sort(task_graph))
 - **Scheduling Problems:** Solve dependency constraints effectively with graph algorithms.
 
 Next, we will conclude the book with exercises, problems, and references for further exploration.
+
+Next: [Questions](../programming/questions.md)

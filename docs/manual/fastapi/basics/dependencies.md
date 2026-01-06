@@ -116,3 +116,5 @@ async def read_items():
 - Learn about Security Features
 - Understand [Advanced Patterns](../advanced/crud_patterns.md)
 - Explore [Best Practices](best_practices.md) 
+
+Next: [Best Practices](best_practices.md)

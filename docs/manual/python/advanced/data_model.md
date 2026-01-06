@@ -267,3 +267,5 @@ class AsyncResource:
 - [Descriptors](../advanced/descriptors.md)
 - [Iterators](../advanced/iterators.md)
 - Metaclasses 
+
+Next: [Descriptors](../classes/descriptors.md)

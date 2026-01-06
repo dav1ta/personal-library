@@ -908,3 +908,4 @@
 100. **Question:** What are the future trends in Python development?  
      **Answer:** Expect enhanced performance with projects like PyPy and Cython, increased use of async programming, growing adoption in data science and machine learning, and continued improvements in type checking and code maintainability.
 
+Next: [Design Patterns](../system_design/design.md)

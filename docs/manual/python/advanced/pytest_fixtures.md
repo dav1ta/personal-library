@@ -177,3 +177,5 @@ def test_monkeypatch(monkeypatch):
 - Debugging
 - Error Handling
 - Performance Optimization 
+
+Next: [Test Examples](../testing/test.md)

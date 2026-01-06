@@ -93,3 +93,5 @@ select! {
 - Use `#[tokio::test]` or `#[actix_rt::test]` for async tests.
 - In threaded tests, coordinate with channels instead of sleeps; if timing matters, prefer `loom` for deterministic concurrency testing.
 - Validate absence of deadlocks by keeping tests short-lived and enabling `RUST_BACKTRACE=1` for panics. Use `cargo test -- --nocapture` to see log output.
+
+Next: [Memory & Tooling](memory.md)

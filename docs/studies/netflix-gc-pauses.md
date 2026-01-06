@@ -270,3 +270,5 @@ Practically, this translates to:
 - Optimize each stage, especially transitions between heap and off-heap.
 
 These principles are widely applicable to any JVM-based, high-throughput streaming system, not just Netflix’s stack.
+
+Next: [Pinterest HBase Latency](pinterest-hbase-latency.md)
