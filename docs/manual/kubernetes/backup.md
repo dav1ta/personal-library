@@ -1,22 +1,11 @@
-## get all services
+# Backup
 
-`kubectl get all --all-namespaces -o yaml > all-deploy.yaml`
+## What to Back Up
+- etcd (cluster state)
+- Persistent volumes (application data)
+- YAML manifests (Git)
 
-## Tools
-
-VELERO
-
-## ETCD cluster backup
---data-dir 
-/var/lib/etcd
-
-`etcdctl snapshot save snapshot.db`
-
-`service kube-apiserver stop`
-
-`etcdctl snapshot restore snapshot.db --data-dir /var/lib/etcd-from-backup`
-
-`systemctl daemon-reload`
-`systemctl etcd restart`
-
-## etcd need keys for that command
+## Approach
+- etcd snapshots on a schedule.
+- Volume backups via CSI snapshot or backup tool.
+- Restore tests on a staging cluster.

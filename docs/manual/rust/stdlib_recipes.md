@@ -54,7 +54,7 @@ println!("took {:?}", start.elapsed());
 ```rust
 let caps: Vec<_> = items.iter().map(|s| s.to_ascii_uppercase()).collect();
 ```
-- De-dupe while preserving order with `LinkedHashSet` (from `linked-hash-map` crate) or stable sort + dedup if reordering is acceptable.
+- De-dupe while preserving order with `IndexSet` (from `indexmap` crate) or stable sort + dedup if reordering is acceptable.
 - Slicing: `&vec[..]`, `split_at`; beware panics on out-of-bounds.
 
 ## Parsing & Serialization (stdlib-side)

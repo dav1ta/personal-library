@@ -9,6 +9,7 @@
 - [Cargo & Tooling](tooling_cargo.md)
 - [Testing](testing.md)
 - [CLI / Web / DB Recipes](cli_web_db.md)
+- [Libraries](libraries.md)
 - [Async Patterns](async_patterns.md)
 
 ## Quick Links

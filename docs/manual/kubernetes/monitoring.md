@@ -1,25 +1,19 @@
-## logging and monitoring
+# Monitoring
 
+## What to Watch
+- Node CPU/memory/disk pressure
+- Pod restarts and crash loops
+- API server latency/errors
+- Workload latency and error rates
 
-kubelet contains anther tool named **Cadvisor** whhich monitors perfomance
+## Common Stack
+- Metrics: Prometheus + Grafana
+- Logs: Fluent Bit / Loki / ELK
+- Traces: OpenTelemetry
 
-## enable with minikube
-
-`minikube addons enable  metrics-server`
-
-## other
-
-`git clone https://github.com/kodekloudhub/kubernetes-metrics-server.git`
-
-## show stats
-`kubectl top node`
-`kubectl top pod`
-
-## docker  logs
-
-`docker log -f dockername`
-
-`kubectl logs -f podname`
-
-## if in pods are miltiple container u have to specify name
-
+## Quick Checks
+```bash
+kubectl top nodes
+kubectl top pods -A
+kubectl get events -A --sort-by=.lastTimestamp
+```

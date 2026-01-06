@@ -1,18 +1,24 @@
+# Networking (Basics)
+
+## Core Ideas
+- Every pod gets its own IP.
+- Pods can talk to each other directly.
+- Services give stable virtual IPs + load balancing.
+
+## Network Policies
+Control traffic between pods/namespaces.
+
+```yaml
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
- name: db-policy
+  name: deny-all
 spec:
-  podSelector:
-    matchLabels:
-      role: db
+  podSelector: {}
   policyTypes:
-  - Ingress
-  ingress:
-  - from:
-    - podSelector:
-        matchLabels:
-          role: api-pod
-    ports:
-    - protocol: TCP
-      port: 3306
+    - Ingress
+```
+
+## Notes
+- Requires a CNI plugin (Calico, Cilium, etc).
+- Policies default to "allow" until you add them.

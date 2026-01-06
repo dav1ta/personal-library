@@ -53,7 +53,7 @@ for job in jobs {
 - Prefer bounded `mpsc` channels to avoid unbounded memory growth; monitor lag with `Receiver::len`.
 
 ## Cancellation and Shutdown
-- Cancellation is cooperative: dropping a task’s `JoinHandle` cancels it at the next await.
+- Cancellation is cooperative: dropping a task’s `JoinHandle` detaches it (the task keeps running). Use `JoinHandle::abort`, a `CancellationToken`, or explicit shutdown signals.
 - Propagate shutdown signals through channels or `watch`:
 ```rust
 use tokio::{select, sync::watch};

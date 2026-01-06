@@ -80,7 +80,7 @@ select! {
 ```
 
 ## Cancellation, Timeouts, and Backpressure
-- Cancellation is cooperative; dropping a `JoinHandle` cancels the task. Ensure tasks check for shutdown signals (channels, `watch`, `Notify`).
+- Cancellation is cooperative; dropping a `JoinHandle` *detaches* the task (it keeps running). To stop tasks, use `JoinHandle::abort`, a `CancellationToken`, or explicit shutdown signals (channels, `watch`, `Notify`).
 - Apply timeouts with `tokio::time::timeout(duration, fut)`; handle `Elapsed`.
 - For streams, apply backpressure with bounded channels or `buffer_unordered`/`buffered` to cap in-flight tasks.
 

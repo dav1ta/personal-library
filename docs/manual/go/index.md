@@ -1,10 +1,11 @@
 # Go Docs Overview
 
-Organized into: basics, types & interfaces, concurrency, standard library, design, testing, and advanced topics.
+Organized into: basics, types & interfaces, concurrency, real-world patterns, standard library, design, testing, and advanced topics.
 
 - Start with `basics/` to learn core syntax, types, and packages.
 - Move to `types/` for methods, interfaces, and embedding.
 - Use `concurrency/` for goroutines, channels, and patterns.
+- `patterns/` is for real-world web, data, and systems workflows.
 - The `modules/` section summarizes key standard library packages.
 - `structure/` and `testing/` cover architecture and test practices.
 - `advanced/` covers generics, reflection, unsafe, and memory/tooling.
@@ -37,6 +38,14 @@ Organized into: basics, types & interfaces, concurrency, standard library, desig
 - [Channels & Select](concurrency/channels_select.md)
 - [Sync + Context](concurrency/sync_context.md)
 - [Patterns](concurrency/patterns.md)
+
+### Real-World Patterns
+- [Web Services](patterns/web.md)
+- [Data Access](patterns/data.md)
+- [Systems](patterns/systems.md)
+- [Config and Secrets](patterns/config.md)
+- [Background Jobs](patterns/background_jobs.md)
+- [Libraries](patterns/libraries.md)
 
 ### Standard Library
 - [Overview](modules/overview.md)

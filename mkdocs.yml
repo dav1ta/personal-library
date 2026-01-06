@@ -133,6 +133,13 @@ nav:
         - Channels & Select: manual/go/concurrency/channels_select.md
         - Sync + Context: manual/go/concurrency/sync_context.md
         - Patterns: manual/go/concurrency/patterns.md
+    - Real-World Patterns:
+        - Web Services: manual/go/patterns/web.md
+        - Data Access: manual/go/patterns/data.md
+        - Systems: manual/go/patterns/systems.md
+        - Config and Secrets: manual/go/patterns/config.md
+        - Background Jobs: manual/go/patterns/background_jobs.md
+        - Libraries: manual/go/patterns/libraries.md
     - Standard Library:
         - Overview: manual/go/modules/overview.md
         - Core & Text: manual/go/modules/core.md
@@ -180,6 +187,7 @@ nav:
 - Git:
     - Workflows: manual/git/flows.md
 - Angular:
+    - Versions: manual/angular/versions.md
     - RxJS: manual/angular/rxjs.md
     - Tips: manual/angular/tips.md
     - General: manual/angular/expert.md
@@ -237,6 +245,7 @@ nav:
     - Cargo & Tooling: manual/rust/tooling_cargo.md
     - Testing: manual/rust/testing.md
     - CLI / Web / DB: manual/rust/cli_web_db.md
+    - Libraries: manual/rust/libraries.md
     - Async Patterns: manual/rust/async_patterns.md
 - Daily Life:
     - Nutrition: manual/other/nutr.md
@@ -273,6 +282,7 @@ theme:
   palette:
     primary: black
   font:
+    text: Roboto
     code: Roboto Mono
   features:
     - content.code.copy
@@ -286,3 +296,6 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+
+extra_css:
+  - manual/reading.css
