@@ -47,6 +47,9 @@ Use this as a practical checklist when designing services.
 - Rollback strategy.
 - Backups + restore tests.
 
+## Deep Dives
+- [Event-Driven Patterns](event_driven.md)
+
 ## Typical Architecture Template
 - API layer -> services -> data store
 - Cache in front of data store

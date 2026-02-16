@@ -38,11 +38,12 @@ Organized into: basics, advanced, classes, decorators, threading/testing, module
  - [Objects and Protocols](advanced/objects.md)
  - [Best Practices](advanced/best_practices.md)
  - [Memory & GC](advanced/memory.md)
- - [Import Hooks + AST](advanced/import_hooks_ast.md)
+- [Import Hooks + AST](advanced/import_hooks_ast.md)
  - [Async Patterns](advanced/async_patterns.md)
   - [Multiprocessing](advanced/multiprocessing.md)
   - [Pattern Matching](advanced/pattern_matching.md)
   - [Exception Groups](advanced/errors_exceptiongroups.md)
+  - [Runtime Internals](advanced/runtime_internals.md)
 
 ### Modules
 - [Built-ins Tables](modules/builtins.md)
