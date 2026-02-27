@@ -293,6 +293,7 @@ Minimal policy:
 | Auth at scale | Centralized identity, token validation, scopes |
 | Abuse | Rate limiting, WAF, bot detection |
 
+<<<<<<< HEAD
 ## Operations
 | Problem | Patterns |
 | --- | --- |
@@ -304,6 +305,21 @@ Minimal policy:
 | --- | --- |
 | Monolith vs microservices | Start modular; split when needed |
 | Sync vs async | Async for slow or retryable work |
+=======
+## Observability
+- Metrics, logs, traces
+- SLOs/SLAs
+- Data quality monitors (freshness, completeness, drift)
+- Capacity signals (p95/p99 latency, queue lag, disk growth, cardinality)
+
+## Design Interview Flow (Short)
+1. Requirements and constraints.
+2. High-level architecture.
+3. Data model, consistency, and durability choices.
+4. Scaling and partition strategy.
+5. Bottlenecks, failure modes, and operational runbooks.
+6. Trade-offs, costs, and next steps.
+>>>>>>> 7465c7d2fa4196c8c33c7b07d70017ba7e415ffe
 
 ---
 
