@@ -37,4 +37,6 @@ app.add_middleware(
 - Use structured logging.
 - Run with `uvicorn --reload` in dev only.
 
+See also: [System Design Good Practices](../../system_design/good_practices.md) for observability and debugging hygiene.
+
 Next: [CRUD Patterns](../advanced/crud_patterns.md)

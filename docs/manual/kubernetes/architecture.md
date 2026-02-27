@@ -21,4 +21,4 @@
 - Treat the API server as the source of truth.
 - etcd is critical; back it up.
 
-Next: [Backup](backup.md)
+Next: [Pods](pods.md)

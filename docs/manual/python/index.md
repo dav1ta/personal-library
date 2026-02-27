@@ -5,6 +5,12 @@ Organized into: basics, advanced, classes, decorators, threading/testing, module
 - Start with `basics/` then explore advanced topics.
 - Each section includes an `index.md` or overview for context.
 
+## How to Use This Section
+
+- Canonical path note: prefer `python/basics/` when `python/basic/` duplicates exist.
+- Learning path: `basics/` -> `modules/` -> `advanced/` -> `structure/` -> targeted topic pages.
+- Review loop: revisit `basics/` and `advanced/best_practices.md` before deep-diving into async/threading/runtime internals.
+
 ## Table of Contents
 
 ### Basics
@@ -68,6 +74,12 @@ Organized into: basics, advanced, classes, decorators, threading/testing, module
   - [HTTP Clients](modules/http_clients.md)
 
 ## Quick Links
+- [Python Basics Structure](basics/structure.md)
+- [Python Best Practices](advanced/best_practices.md)
+- [Async Patterns](advanced/async_patterns.md)
+- [Logging](modules/logging.md)
+- [HTTP Clients](modules/http_clients.md)
+- [DB Patterns](modules/db_patterns.md)
 
 ## Contributing
 

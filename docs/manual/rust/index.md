@@ -1,5 +1,11 @@
 # Rust Docs Overview
 
+## How to Use This Section
+
+- Learning path: `vars.md` -> `generators.md` -> `memory.md` -> `object.md` -> `async_patterns.md` -> `testing.md` / `tooling_cargo.md`.
+- Review loop: revisit `memory.md` and `async_patterns.md` regularly; they carry many concepts that become clearer with practice.
+- Problem-solving mode: use `stdlib_recipes.md` and `cli_web_db.md` as applied references after the fundamentals.
+
 ## Table of Contents
 - [Fundamentals](vars.md)
 - [Data, Traits, Generics, and Iterators](generators.md)

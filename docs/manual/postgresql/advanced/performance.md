@@ -35,6 +35,8 @@ REINDEX INDEX idx_users_email;
 ## 7) Observability
 Enable `pg_stat_statements` and log slow queries.
 
+See also: [System Design Patterns](../../system_design/book.md) for observability/SLO framing.
+
 ## Next Steps
 - [Configuration](../basics/configuration.md)
 

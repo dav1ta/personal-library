@@ -23,4 +23,4 @@ spec:
 - Requires a CNI plugin (Calico, Cilium, etc).
 - Policies default to "allow" until you add them.
 
-Next: [Pods](pods.md)
+Next: [Roles](roles.md)

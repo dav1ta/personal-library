@@ -20,4 +20,4 @@ tolerations:
     effect: "NoSchedule"
 ```
 
-Next: [Code Review](../programming/code_review.md)
+Next: [Lifecycle](lifecycle.md)

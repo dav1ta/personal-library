@@ -30,8 +30,10 @@ Focused notes for production use. Use the official docs for full coverage.
 - Track slow queries and lock contention.
 - Watch autovacuum and long transactions.
 
+See also: [System Design Patterns](../system_design/book.md) for read replicas and observability, and [Event-Driven Patterns](../system_design/book.md) for async debugging/correlation IDs.
+
 ## Related Docs
 - [Configuration](basics/configuration.md)
 - [Performance](advanced/performance.md)
 
-Next: [Docker Compose](../docker/docker-compose.md)
+Next: [PostgreSQL Overview](index.md)

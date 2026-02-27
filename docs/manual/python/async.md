@@ -5,7 +5,7 @@
 
 Asynchronous programming is a method that allows for the execution of certain tasks concurrently without blocking the main thread. Instead of waiting for one task to complete before moving on to the next, asynchronous programming allows multiple tasks to run in "parallel", making better use of system resources and often speeding up overall execution.
 
-**Next topic:** Traditional Multi-threading vs Asynchronous Programming.
+**Next topic:** [Traditional Multi-threading vs Asynchronous Programming.](#2-traditional-multi-threading-vs-asynchronous-programming)
 
 
 
@@ -19,7 +19,7 @@ In contrast, asynchronous programming, especially in Python's context, utilizes 
 - **Scalability:** Asynchronous programs can handle many tasks with a single thread.
 - **Simplicity:** Avoids complexities of thread synchronization and deadlocks.
 
-**Next topic:** Python's `asyncio` Basics.
+**Next topic:** [Python's `asyncio` Basics.](#3-pythons-asyncio-basics)
 
 
 ### 3. Python's `asyncio` Basics
@@ -77,7 +77,7 @@ async def main():
 asyncio.run(main())
 ```
 
-**Next topic:** Asynchronous I/O with Python.
+**Next topic:** [Asynchronous I/O with Python.](#4-asynchronous-io-with-python)
 
 
 ### 4. Asynchronous I/O with Python
@@ -105,7 +105,7 @@ async def main():
 asyncio.run(main())
 ```
 
-**Next topic:** Advanced Techniques in Asynchronous Programming.
+**Next topic:** [Advanced Techniques in Asynchronous Programming.](#5-advanced-techniques-in-asynchronous-programming)
 
 
 ### 5. Advanced Techniques in Asynchronous Programming
@@ -173,7 +173,7 @@ async def main():
 asyncio.run(main())
 ```
 
-**Next topic:** Integration with Other Libraries.
+**Next topic:** [Integration with Other Libraries.](#6-integration-with-other-libraries)
 ### 6. Integration with Other Libraries
 
 #### 6.1. `aiohttp` for Asynchronous HTTP Requests
@@ -218,7 +218,7 @@ async def main():
 asyncio.run(main())
 ```
 
-**Next topic:** Potential Pitfalls and Common Mistakes.
+**Next topic:** [Potential Pitfalls and Common Mistakes.](#7-potential-pitfalls-and-common-mistakes)
 ### 7. Potential Pitfalls and Common Mistakes
 
 Understanding the potential pitfalls in asynchronous programming can save developers a lot of time and prevent unexpected behaviors.
@@ -274,7 +274,7 @@ asyncio.run(main())
 
 Always ensure you handle exceptions in your tasks, either within the task or when gathering/waiting for them.
 
-**Next topic:** Best Practices & Recommendations.
+**Next topic:** [Best Practices & Recommendations.](#8-best-practices-recommendations)
 ### 8. Best Practices & Recommendations
 
 When writing asynchronous code, following best practices can help maintainability, performance, and overall code quality.
@@ -304,7 +304,7 @@ This ensures that the session is properly closed after usage.
 
 Even though asynchronous code in Python usually runs in a single thread, if you integrate with other systems or use thread pools, be aware of thread-safety. Ensure shared resources are accessed in a thread-safe manner.
 
-**Next topic:** Conclusion and Future of Python Async.
+**Next topic:** [Conclusion and Future of Python Async.](#9-conclusion-and-future-of-python-async)
 ### 9. Conclusion and Future of Python Async
 
 Asynchronous programming in Python has come a long way, especially with the introduction and continuous development of `asyncio`. It provides a powerful toolset for writing efficient I/O-bound programs.
@@ -404,7 +404,7 @@ asyncio.run(bounded_producer(queue))
 
 When the queue reaches its maximum size, `queue.put` will block until there's room to add another item.
 
-**Next topic:** More Advanced Techniques in Asynchronous Programming.
+**Next topic:** [More Advanced Techniques in Asynchronous Programming.](#11-more-advanced-techniques-in-asynchronous-programming)
 ### 11. More Advanced Techniques in Asynchronous Programming
 
 #### 11.1. Priority Queues
@@ -512,7 +512,7 @@ async def main():
 asyncio.run(main())
 ```
 
-**Next topic:** Combining Async IO with Multiprocessing.
+**Next topic:** [Combining Async IO with Multiprocessing.](#12-combining-async-io-with-multiprocessing)
 ### 12. Combining Async IO with Multiprocessing
 
 While `asyncio` excels at I/O-bound tasks, it runs in a single thread and doesn't utilize multiple cores for CPU-bound tasks. For these tasks, you can combine `asyncio` with multiprocessing to achieve parallelism across cores.
@@ -572,7 +572,7 @@ process.join()
 - **Data Serialization:** Remember that data sent between processes needs to be serialized and deserialized, which can introduce overhead.
 - **Resource Management:** Ensure all processes are cleaned up to avoid resource leaks or zombie processes.
 
-**Next topic:** Advanced Patterns and Designs in Async Applications.
+**Next topic:** [Advanced Patterns and Designs in Async Applications.](#13-advanced-patterns-and-designs-in-async-applications)
 ### 13. Advanced Patterns and Designs in Async Applications
 
 #### 13.1. Event-driven Architecture
@@ -651,7 +651,7 @@ stream.subscribe(on_next=print, scheduler=AsyncIOScheduler(asyncio.get_event_loo
 asyncio.get_event_loop().run_forever()
 ```
 
-**Next topic:** Debugging and Profiling Asynchronous Python Applications.
+**Next topic:** [Debugging and Profiling Asynchronous Python Applications.](#14-debugging-and-profiling-asynchronous-python-applications)
 ### 14. Debugging and Profiling Asynchronous Python Applications
 
 Debugging and profiling asynchronous applications can be different than traditional synchronous applications. Let's look into techniques and tools available for `asyncio`:
@@ -719,7 +719,7 @@ async def main():
 asyncio.run(main())
 ```
 
-**Next topic:** Scaling and Deploying Asynchronous Applications.
+**Next topic:** [Scaling and Deploying Asynchronous Applications.](#15-scaling-and-deploying-asynchronous-applications)
 ### 15. Scaling and Deploying Asynchronous Applications
 
 Once your asynchronous application is developed and tested, the next step is to deploy and scale it. Here are some strategies and considerations:
@@ -759,7 +759,7 @@ Asynchronous applications, especially long-running ones, should be monitored for
 
 Implement monitoring and alerting to keep an eye on exceptions and errors in production. Tools like Sentry can be integrated to capture and notify about runtime errors.
 
-**Next topic:** Conclusion and Continuous Learning in Asynchronous Programming.
+**Next topic:** [Conclusion and Continuous Learning in Asynchronous Programming.](#16-conclusion-and-continuous-learning-in-asynchronous-programming)
 ### 16. Conclusion and Continuous Learning in Asynchronous Programming
 
 The landscape of asynchronous programming in Python is vast and continuously evolving. With tools like `asyncio` and the expanding ecosystem around it, developers have powerful mechanisms to write efficient, scalable, and maintainable applications.

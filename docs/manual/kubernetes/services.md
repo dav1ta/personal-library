@@ -22,4 +22,4 @@ spec:
       targetPort: 8080
 ```
 
-Next: [Scheduler](scheduler.md)
+Next: [Namespaces](namespaces.md)

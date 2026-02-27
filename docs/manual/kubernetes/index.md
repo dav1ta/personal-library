@@ -2,6 +2,12 @@
 
 Concise notes on core concepts and operations.
 
+## How to Use This Section
+
+- Learning path: Architecture -> Pods -> ReplicaSets/Deployments -> Services -> Namespaces/Network -> RBAC/Security -> Scheduler/Lifecycle -> Monitoring/Backup/Maintenance.
+- Review loop: revisit Architecture, Services, Network, Security, and Monitoring before touching advanced operational changes.
+- Problem-solving mode: start from the failed layer (scheduling, networking, security, lifecycle, backup) and then return to the overview.
+
 - [Architecture](architecture.md)
 - [Pods](pods.md)
 - [ReplicaSets](replicasets.md)

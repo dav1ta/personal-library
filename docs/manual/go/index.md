@@ -10,6 +10,12 @@ Organized into: basics, types & interfaces, concurrency, real-world patterns, st
 - `structure/` and `testing/` cover architecture and test practices.
 - `advanced/` covers generics, reflection, unsafe, and memory/tooling.
 
+## How to Use This Section
+
+- Canonical path note: prefer `go/basics/` when `go/basic/` duplicates exist.
+- Learning path: `basics/` -> `types/` -> `concurrency/` -> `patterns/` + `modules/` -> `structure/` + `testing/` -> `advanced/`.
+- Review loop: re-read `concurrency/overview.md`, `patterns/web.md`, and `testing/testing.md` when returning after a break.
+
 ## Table of Contents
 Quick links to sections in this guide.
 

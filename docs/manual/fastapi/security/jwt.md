@@ -63,4 +63,6 @@ async def current_user(token: str = Depends(oauth2)):
 - Use strong secrets and rotate keys.
 - Enforce auth scopes/roles in dependencies.
 
-Next: [Overview](../../postgresql/index.md)
+See also: [System Design Patterns](../../system_design/book.md) for AuthN/AuthZ, least privilege, and secret rotation.
+
+Next: [JWT Auth (Advanced)](../advanced/security_jwt.md)

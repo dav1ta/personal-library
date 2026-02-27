@@ -9,4 +9,4 @@
 - Drop Linux capabilities where possible.
 - Run as non-root.
 
-Next: [Lifecycle](lifecycle.md)
+Next: [Scheduler](scheduler.md)

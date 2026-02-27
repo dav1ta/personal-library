@@ -14,4 +14,4 @@ kubectl uncordon <node>
 - Clean up unused namespaces and CRDs.
 - Rotate credentials and certificates.
 
-Next: [Monitoring](monitoring.md)
+Next: [Overview](index.md)

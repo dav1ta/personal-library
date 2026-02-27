@@ -11,4 +11,4 @@ kubectl get rs
 kubectl describe rs <name>
 ```
 
-Next: [Roles](roles.md)
+Next: [Deployments](deployments.md)
